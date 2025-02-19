@@ -24,7 +24,7 @@ const ComingSoon: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       <img src={comingSoonGif} alt="Coming Soon" className="w-28 h-28 mb-4" />
       <h1 className="text-3xl font-bold text-center">Coming Soon!</h1>
       <p className="text-center text-gray-400 mt-4 px-4">
-        Our chatbot is under development. Stay tuned for updates!
+        Yaira is under development. Stay tuned for updates!
       </p>
     </motion.div>
   );

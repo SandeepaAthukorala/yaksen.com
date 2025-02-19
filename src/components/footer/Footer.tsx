@@ -26,8 +26,7 @@ export default function Footer() {
               <span className="ml-2 text-2xl font-bold">YAKSEN</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Pioneering the future of AI-driven business solutions with
-              innovative technology and exceptional service.
+            Shaping the future with AI-powered business and creative solutions.
             </p>
             <SocialLinks />
           </div>

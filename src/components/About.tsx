@@ -50,10 +50,7 @@ export default function About() {
 
         <div className="mt-12 max-w-3xl mx-auto text-center">
           <p className="text-lg text-gray-500 dark:text-gray-400">
-            YAKSEN: AI-driven solutions provide operational efficiencies,
-            advanced decision-making, creativity in business, and solve complex
-            problems. Our expertise empowers businesses to automate ad optimize
-            workflows to measureble and sustainable results.
+          Our AI-driven solutions enhance operational efficiency, support advanced decision-making, foster creativity, and solve complex business challenges. With our expertise, we help businesses automate and optimize workflows, delivering measurable and sustainable results.
           </p>
         </div>
 

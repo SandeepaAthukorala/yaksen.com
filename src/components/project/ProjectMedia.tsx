@@ -29,18 +29,15 @@ export default function ProjectMedia({ videos, gallery }: ProjectMediaProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery?.map((item, index) => (
-            <div
-              key={index}
-              className="group relative rounded-xl overflow-hidden"
-            >
-              <img
-                src={item}
-                alt={`projectimg${index}`}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                <p className="text-white text-sm">{item.title}</p>
-              </div> */}
+            <div key={index} className="group relative rounded-xl overflow-hidden">
+              {/* Wrap the image in a div that maintains the aspect ratio */}
+              <div className="aspect-w-16 aspect-h-9">
+                <img
+                  src={item}
+                  alt={`projectimg${index}`}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
             </div>
           ))}
         </div>

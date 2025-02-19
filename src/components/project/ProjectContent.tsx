@@ -1,6 +1,5 @@
 import React from "react";
-import { FaSpotify, FaYoutube, FaGlobe, FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaTiktok } from "react-icons/fa";
-
+import { FaSpotify, FaYoutube, FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaTiktok, FaGlobe } from "react-icons/fa";
 
 interface ProjectContentProps {
   content: React.ReactNode;
@@ -52,24 +51,28 @@ export default function ProjectContent({
                 ))}
               </ul>
 
-              {/* Project Links Section */}
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-6">
-                Project Links
-              </h2>
-              <div className="flex space-x-4">
-                {projectLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary text-2xl hover:text-opacity-80"
-                  >
-                    {/* Render icon for each platform */}
-                    {iconMapping[link.platform.toLowerCase()] || <FaGlobe />}
-                  </a>
-                ))}
-              </div>
+              {/* Conditionally render Project Links Section */}
+              {projectLinks.length > 0 && (
+                <>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-6">
+                    Project Links
+                  </h2>
+                  <div className="flex space-x-4">
+                    {projectLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary text-2xl hover:text-opacity-80"
+                      >
+                        {/* Render icon for each platform */}
+                        {iconMapping[link.platform.toLowerCase()] || <FaGlobe />}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

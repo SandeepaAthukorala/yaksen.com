@@ -1,0 +1,50 @@
+interface ProjectMediaProps {
+  videos: string[];
+  gallery: string[];
+}
+
+export default function ProjectMedia({ videos, gallery }: ProjectMediaProps) {
+  console.log(videos);
+
+  return (
+    <div className="py-16 bg-gray-50 dark:bg-gray-800/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          Project Showcase
+        </h2>
+
+        {videos &&
+          videos.map((item, index) => (
+            <div className="mb-12" key={index}>
+              <div className="aspect-w-16 md:h-[500px] h-[200px] rounded-xl overflow-hidden">
+                <iframe
+                  src={`${item}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          ))}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {gallery?.map((item, index) => (
+            <div
+              key={index}
+              className="group relative rounded-xl overflow-hidden"
+            >
+              <img
+                src={item}
+                alt={`projectimg${index}`}
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p className="text-white text-sm">{item.title}</p>
+              </div> */}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

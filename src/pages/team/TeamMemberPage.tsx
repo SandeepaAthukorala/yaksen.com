@@ -32,6 +32,7 @@ interface MemberData {
   member_about: string;
   member_experties: string[];
   member_featured_projects: string[];
+  member_resume_link: string;  // Add this field for the resume link
 }
 
 interface projectData {
@@ -61,7 +62,6 @@ export default function TeamMemberPage() {
   const getFeaturedProjectData = async (id: string | undefined) => {
     try {
       const res = await getFeaturedProjects(id);
-
       setFeaturedProjects(res);
     } catch (error) {
       console.log(error);
@@ -90,8 +90,6 @@ export default function TeamMemberPage() {
   const handleProjectClick = (projectId: string) => {
     navigate(`/projects/${projectId}`);
   };
-
-  console.log(member.member_socialmedia);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -138,31 +136,43 @@ export default function TeamMemberPage() {
                         >
                           {item.platform &&
                             item.platform.toLowerCase() === "github" && (
-                              <FaGithub className="h-6 w-6 text-white" />
+                              <FaGithub className="h-6 w-6 text-black dark:text-white" />
                             )}
                           {item.platform &&
                             item.platform.toLowerCase() === "linkedin" && (
-                              <FaLinkedin className="h-6 w-6 text-white" />
+                              <FaLinkedin className="h-6 w-6 text-black dark:text-white" />
                             )}
                           {item.platform &&
                             item.platform.toLowerCase() === "facebook" && (
-                              <FaSquareFacebook className="h-6 w-6 text-white" />
+                              <FaSquareFacebook className="h-6 w-6 text-black dark:text-white" />
                             )}
                           {item.platform &&
                             item.platform.toLowerCase() === "x" && (
-                              <FaX className="h-6 w-6 text-white" />
+                              <FaX className="h-6 w-6 text-black dark:text-white" />
                             )}
                           {item.platform &&
                             item.platform.toLowerCase() === "youtube" && (
-                              <FaYoutube className="h-6 w-6 text-white" />
+                              <FaYoutube className="h-6 w-6 text-black dark:text-white" />
                             )}
                           {item.platform &&
                             item.platform.toLowerCase() === "instagram" && (
-                              <FaInstagram className="h-6 w-6 text-white" />
+                              <FaInstagram className="h-6 w-6 text-black dark:text-white" />
                             )}
                         </a>
                       ))}
                     </div>
+                    {/* Download Resume Button */}
+                    {member.member_resume_link && (
+                      <div className="mt-6">
+                        <a
+                          href={member.member_resume_link}
+                          download
+                          className="inline-block bg-primary text-white py-2 px-6 rounded-lg text-lg hover:bg-primary-dark"
+                        >
+                          Download Resume
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -207,29 +217,28 @@ export default function TeamMemberPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {featuredProjects.map((project, index) => (
                         <div
-                        key={index}
-                        onClick={() => handleProjectClick(project._id)}
-                        style={{
-                          backgroundImage: `url(${project.project_cover_img_link})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
-                        className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1"
-                      >
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
+                          key={index}
+                          onClick={() => handleProjectClick(project._id)}
+                          style={{
+                            backgroundImage: `url(${project.project_cover_img_link})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
+                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1"
+                        >
+                          {/* Overlay */}
+                          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
 
-                        {/* Content */}
-                        <div className="relative z-10">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                            {project.project_title}
-                          </h3>
-                          <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                            {project.project_sub_title}
-                          </p>
+                          {/* Content */}
+                          <div className="relative z-10">
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                              {project.project_title}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                              {project.project_sub_title}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-
                       ))}
                     </div>
                   </div>

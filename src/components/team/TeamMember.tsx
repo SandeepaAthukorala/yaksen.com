@@ -9,6 +9,7 @@ interface TeamMemberProps {
   image: string;
   bio: string;
   email: string;
+  url_head:string;
 }
 
 export default function TeamMember({
@@ -18,14 +19,19 @@ export default function TeamMember({
   image,
   bio,
   email,
+  url_head,
 }: TeamMemberProps) {
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:${email}`;
+    window.location.href = `mailto:${url_head}`;
   };
 
+  // Determine the base URL dynamically
+  const isLocalhost = window.location.hostname === "localhost";
+  const linkPath = isLocalhost ? `/team/${id}` : `/team/${url_head}`;
+
   return (
-    <Link to={`/team/${id}`} className="block text-center group">
+    <Link to={linkPath} className="block text-center group">
       <div className="relative group">
         <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden">
           <img

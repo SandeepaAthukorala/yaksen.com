@@ -44,7 +44,7 @@ export default function About() {
             About <span className="text-primary">YAKSEN</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-400">
-            Shaping the future with AI-powered business and creative solutions.
+          Making processes smarter, faster, more personalized, and more effective
           </p>
         </div>
 

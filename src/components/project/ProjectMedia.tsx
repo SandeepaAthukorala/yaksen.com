@@ -14,19 +14,32 @@ export default function ProjectMedia({ videos, gallery }: ProjectMediaProps) {
         </h2>
 
         {videos &&
-          videos.map((item, index) => (
-            <div className="mb-12" key={index}>
-              <div className="aspect-w-16 md:h-[500px] h-[200px] rounded-xl overflow-hidden">
-                <iframe
-                  src={`${item}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-          ))}
-
+  videos.map((item, index) => (
+    <div className="mb-12" key={index}>
+      <div className="aspect-w-16 md:h-[500px] h-[200px] rounded-xl overflow-hidden">
+        {/* Check if the item is a Facebook Reel URL */}
+        {item.includes('facebook.com') ? (
+          <iframe
+            src={`https://www.facebook.com/plugins/video.php?height=476&href=${encodeURIComponent(item)}&show_text=false&width=476&t=0`}
+            width="476"
+            height="476"
+            style={{ border: 'none', overflow: 'hidden' }}
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          />
+        ) : (
+          <iframe
+            src={`${item}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        )}
+      </div>
+    </div>
+  ))}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery?.map((item, index) => (
             <div key={index} className="group relative rounded-xl overflow-hidden">

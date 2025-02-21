@@ -5,11 +5,18 @@ import {
   FaLinkedin,
   FaYoutube,
   FaInstagram,
-} from "react-icons/fa6"; // Add this import
+} from "react-icons/fa6"; 
+
+import {
+  TbBrandFiverr,
+  TbBrandUpwork
+} from "react-icons/tb";
+
+import { SiFreelancer } from "react-icons/si";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Brain, Mail } from "lucide-react"; // No need to import Facebook from lucide-react anymore
+import { Brain, Mail } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import NotFound from "../NotFound";
@@ -22,6 +29,10 @@ interface SocialMedia {
   platform: string;
   link: string;
 }
+interface FreeLance {
+  platform: string;
+  link: string;
+}
 
 interface MemberData {
   member_image_link: string;
@@ -29,10 +40,11 @@ interface MemberData {
   member_position: string;
   member_mail: string;
   member_socialmedia: SocialMedia[];
+  member_freelance_sites: FreeLance[];
   member_about: string;
   member_experties: string[];
   member_featured_projects: string[];
-  member_resume_link: string;  // Add this field for the resume link
+  member_resume_link: string;
 }
 
 interface projectData {
@@ -161,7 +173,36 @@ export default function TeamMemberPage() {
                         </a>
                       ))}
                     </div>
-                    {/* Download Resume Button */}
+
+                    {/* Freelance Sites Section */}
+                    {member.member_freelance_sites && (
+                    <div className="flex space-x-4 justify-center mt-4">
+                      {member.member_freelance_sites.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1 bg-gray-100 dark:bg-gray-700 rounded-lg hover:text-primary"
+                        >
+                          {item.platform &&
+                            item.platform.toLowerCase() === "fiverr" && (
+                              <TbBrandFiverr className="h-6 w-6 text-green-500" />
+                            )}
+                          {item.platform &&
+                            item.platform.toLowerCase() === "upwork" && (
+                              <TbBrandUpwork className="h-6 w-6 text-green-500" />
+                            )}
+                          {item.platform &&
+                            item.platform.toLowerCase() === "freelancer" && (
+                              <SiFreelancer className="h-6 w-6 text-green-500" />
+                            )}
+
+                        </a>
+                      ))}
+                    </div>)}
+
+
                     {member.member_resume_link && (
                       <div className="mt-6">
                         <a

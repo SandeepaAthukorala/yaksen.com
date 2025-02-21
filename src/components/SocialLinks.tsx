@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedin, FaDiscord } from "react-icons/fa"; 
+import { FaFacebook, FaLinkedin, FaDiscord, FaYoutube } from "react-icons/fa"; 
 import SocialLink from "./social/SocialLink";
 
 const socialLinks = [
@@ -9,13 +9,14 @@ const socialLinks = [
     label: "Facebook",
   },
   // { icon: FaInstagram, href: 'https://instagram.com/yaksen', label: 'Instagram' },
-  // { icon: FaYoutube, href: 'https://youtube.com/yaksen', label: 'YouTube' },
+
   { icon: FaDiscord, href: "https://discord.gg/D7hweH5MwW", label: "Discord" },
   {
     icon: FaLinkedin,
     href: "https://www.linkedin.com/company/yaksen-official",
     label: "LinkedIn",
   },
+  { icon: FaYoutube, href: 'https://www.youtube.com/@yaksen-official', label: 'YouTube' }
 ];
 
 export default function SocialLinks() {

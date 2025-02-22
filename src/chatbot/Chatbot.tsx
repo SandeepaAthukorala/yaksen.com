@@ -4,17 +4,17 @@ import ComingSoon from "./comingsoon";
 import BotComponent from "./BotComponent";
 
 const ChatBot: React.FC = () => {
-  const [showComingSoon, setShowComingSoon] = useState(false);
+  const [botShow, setBotShow] = useState(false);
 
   const handleChatButton = () => {
-    setShowComingSoon(true);
+    setBotShow(!botShow);
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6">
-      {showComingSoon ? (
+    <div className="fixed bottom-0 right-0 z-50 md:bottom-6 md:right-6">
+      {botShow ? (
         <div className="absolute bottom-0 right-0">
-          <BotComponent />
+          <BotComponent handleChatButton={handleChatButton} />
         </div>
       ) : (
         <button onClick={handleChatButton}>

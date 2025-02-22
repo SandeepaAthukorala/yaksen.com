@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { IoSend } from "react-icons/io5";
 import { sendMessage } from "../apiCalls/ChatbotCalls";
 import Lottie from "react-lottie";
+import emote_hi from "../bot/character/hi.gif";
+import { IoIosCloseCircle } from "react-icons/io";
 
-const BotComponent = () => {
+const BotComponent = ({ handleChatButton }) => {
   const [messages, setMessages] = useState<any>([]);
   const [userInput, setUserInput] = useState("");
   const [sessionId, setSessionId] = useState("");
@@ -64,23 +66,30 @@ const BotComponent = () => {
   //   };
 
   return (
-    <div className="w-[350px] h-[500px] bg-white  overflow-hidden rounded-lg  dark:bg-gray-800 dark:border-gray-700 border border-solid shadow-xl relative">
+    <div className="md:w-[350px] md:h-[500px] w-screen h-screen bg-white  overflow-hidden rounded-lg  dark:bg-gray-800 dark:border-gray-700 border border-solid shadow-xl relative">
       {/* title bar */}
-      <div className="bg-primary text-white flex items-center gap-2 p-2">
-        <div className="rounded-full " style={{ pointerEvents: "none" }}></div>
-        <div className="text-[18px] font-semibold uppercase">yakira</div>
+      <div className="bg-primary text-white flex items-center justify-between p-2">
+        <div className="flex items-center gap-2">
+          <div className="rounded-full " style={{ pointerEvents: "none" }}>
+            <img src={emote_hi} alt="Chat" className="w-[45px]" />
+          </div>
+          <div className="text-[18px] font-semibold uppercase">yakira</div>
+        </div>
+
+        <div>
+          <IoIosCloseCircle
+            className="text-2xl cursor-pointer hover:text-white/80 duration-200"
+            onClick={() => handleChatButton()}
+          />
+        </div>
       </div>
 
       {/* messages */}
       <div className="p-4">
         <div className=" flex flex-col gap-4 h-[400px] overflow-y-auto hide-scrollbar pb-8">
           {messages.length === 0 && (
-            <div className="flex items-center justify-center w-full h-full text-white text-[13px] text-center">
-              <div>
-                Chat with Yakira Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Non possimus illum quibusdam ipsam fugiat modi
-                in culpa alias repellendus consectetur!
-              </div>
+            <div className="flex items-center justify-center w-full h-full text-white/60 text-[13px] text-center">
+              <div>Chat with Yakira...</div>
             </div>
           )}
 

@@ -1,0 +1,32 @@
+import React, { useState } from "react";
+import emote_hi from "./character/hi.gif";
+import ComingSoon from "./comingsoon";
+import BotComponent from "./BotComponent";
+
+const ChatBot: React.FC = () => {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
+  const handleChatButton = () => {
+    setShowComingSoon(true);
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6">
+      {showComingSoon ? (
+        <div className="absolute bottom-0 right-0">
+          <BotComponent />
+        </div>
+      ) : (
+        <button onClick={handleChatButton}>
+          <img
+            src={emote_hi}
+            alt="Chat"
+            className="w-20 h-20 md:w-32 md:h-32"
+          />
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default ChatBot;

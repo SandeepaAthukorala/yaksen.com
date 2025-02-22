@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import HomePage from "./pages/HomePage";
@@ -19,9 +18,9 @@ import AdminUsers from "./admin/dashboard/pages/AdminUsers";
 import Login from "./admin/auth/login/Login";
 import Register from "./admin/auth/register/Register";
 import ProtectedRoute from "./components/protected/ProtectedRoute";
-import ChatBot from "./bot/bot"
 
 import NotFound from "./pages/NotFound";
+import ChatBot from "./chatbot/Chatbot";
 export default function App() {
   return (
     <ThemeProvider>
@@ -49,8 +48,7 @@ export default function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
-      <ChatBot/>
+      <ChatBot />
     </ThemeProvider>
   );
 }
-

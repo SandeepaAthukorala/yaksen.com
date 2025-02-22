@@ -13,7 +13,7 @@ const ChatBot: React.FC = () => {
   return (
     <div className="fixed bottom-0 right-0 z-50 md:bottom-6 md:right-6">
       {botShow ? (
-        <div className="absolute bottom-0 right-0">
+        <div className="md:absolute md:bottom-0 md:right-0">
           <BotComponent handleChatButton={handleChatButton} />
         </div>
       ) : (

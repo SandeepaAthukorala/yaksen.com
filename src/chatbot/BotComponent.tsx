@@ -7,13 +7,11 @@ import emote_hi from "../bot/character/hi.gif";
 import laugh from "./character/laugh.gif";
 import broken from "./character/broken.gif";
 import fit from "./character/fit.gif";
-import loop from "./character/loop.gif";
 import hi from "./character/hi.gif";
+import bg from "./character/bg.gif";
 import think from "./character/think.gif";
-import error from "./character/error.gif";
+import sad from "./character/sad.gif";
 import love from "./character/love.gif";
-import horay from "./character/horay.gif";
-import flirty from "./character/flirty.gif";
 import shy from "./character/shy.gif";
 import savage from "./character/savage.gif";
 
@@ -22,15 +20,13 @@ const avatarMap: { [key: string]: string } = {
   laugh,
   broken,
   fit,
-  loop,
   hi,
   think,
-  error,
+  sad,
   love,
-  horay,
-  flirty,
   shy,
   savage,
+  bg
 };
 
 const BotComponent = ({ handleChatButton }) => {
@@ -61,6 +57,7 @@ const BotComponent = ({ handleChatButton }) => {
 
     try {
       setThinking(true);
+      setAvatarGif("think"); // Change avatar to 'think' when bot is processing
       setUserInput("");
       const res = await sendMessage({
         session_id: sessionId,
@@ -68,6 +65,7 @@ const BotComponent = ({ handleChatButton }) => {
       });
 
       setThinking(false);
+      setAvatarGif("shy"); // Revert avatar after response
       setTypingText("Typing");
 
       const botMessage = { text: res.data.answer, sender: "bot" };
@@ -100,7 +98,7 @@ const BotComponent = ({ handleChatButton }) => {
     if (thinking) {
       let index = 0;
       let forward = true;
-      const baseWord = "typing";
+      const baseWord = "thinking";
       const interval = setInterval(() => {
         // Capitalize the letter at the current index
         const animatedText = baseWord
@@ -132,88 +130,91 @@ const BotComponent = ({ handleChatButton }) => {
   }, [thinking]);
 
   return (
-<motion.div 
-  initial={{ opacity: 0, x: '100%' }} // Opens from the right
-  animate={
-    isVisible 
-      ? { opacity: 1, x: 0 }          // Open state: fully visible at its original x position
-      : { opacity: 0, y: '100%' }      // Closed state: fades out and slides down
-  }
-  transition={{ duration: 0.3, ease: "easeInOut" }}
-  className="md:w-[350px] md:h-[500px] w-[350px] h-[500px] bg-white overflow-visible rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-xl relative"
-
-
->
-  {/* GIF icon at the top center */}
-  <div
-    className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2"
-    style={{ marginTop: '-50px' }} // Adjust as needed
-  >
-    <img 
-      src={avatarMap[avatarGif]} 
-      alt="bot-avatar" 
-      className="w-48 h-48" 
-    />
-  </div>
-
-  {/* Messages */}
-  <div className="p-4 flex flex-col gap-4 h-[450px] overflow-y-auto hide-scrollbar pb-6 border-[#d94231] border-2">
-    {messages.length === 0 && (
-      <div className="flex items-center justify-center w-full h-full text-black/60 text-[16px] text-center dark:text-white/60">
-        <div>Hey, I'm Yakira! Let’s chat all things Yaksen!</div>
+    <motion.div 
+      initial={
+        isVisible 
+        ? { opacity: 1, x: 0 } 
+        : { opacity: 0, x: '100%' } } 
+      animate={
+        isVisible 
+          ? { opacity: 1, x: 0 } 
+          : { opacity: 0, y: '100%' } 
+      }
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="md:w-[350px] md:h-[500px] w-[350px] h-[500px] bg-white overflow-visible rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-xl relative"
+    >
+      {/* GIF icon at the top center */}
+      <div
+        className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2"
+        style={{ marginTop: '-50px' }} // Adjust as needed
+      >
+        <img 
+          src={avatarMap[avatarGif]} 
+          alt="bot-avatar" 
+          className="w-48 h-48 transition-all duration-500" // Added smooth transition for avatar
+        />
       </div>
-    )}
 
-    {messages.map((message: any, index: any) => (
-      <div key={index} className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}>
-        <div
-          className={`${
-            message.sender === "user" ? "bg-[#d94231] text-white" : "bg-gray-300 text-black"
-          } p-2 px-4 max-w-[70%] text-[14px] ${
-            message.sender === "user" ? "rounded-xl rounded-br-none" : "rounded-xl rounded-bl-none"
-          }`}
+      {/* Messages */}
+      <div className="p-4 flex flex-col gap-4 h-[450px] overflow-y-auto hide-scrollbar pb-6 border-[#d94231] border-2">
+        {messages.length === 0 && (
+          
+          <div className="flex items-center justify-center w-full h-full text-black/60 text-[14px] text-center dark:text-white/60">
+<div>Hey, I'm <strong className="font-bold">Yakira</strong>! Let’s chat all things <strong className="font-bold">Yaksen</strong>!</div>
+
+          </div>
+          
+        )}
+
+        {messages.map((message: any, index: any) => (
+          <div key={index} className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}>
+            <div
+              className={`${
+                message.sender === "user" ? "bg-[#d94231] text-white" : "bg-gray-300 text-black"
+              } p-2 px-4 max-w-[70%] text-[14px] ${
+                message.sender === "user" ? "rounded-xl rounded-br-none" : "rounded-xl rounded-bl-none"
+              }`}
+            >
+              {message.text}
+            </div>
+          </div>
+        ))}
+
+        {thinking && (
+          <div className="flex justify-start">
+            <div className="text-silver dark:text-gray-400 max-w-[70%] text-[16px] rounded-xl rounded-bl-none">
+              {typingText}
+            </div>
+          </div>
+        )}
+
+        <div ref={scrollEndRef} />
+      </div>
+
+      {/* Input Area */}
+      <div className="p-3 flex items-center border-t w-full bg-[#1e293b] absolute bottom-0 left-0 border-2 border-[#d94231] ">
+        <button
+          className="mr-3 px-4 py-3 bg-[#d94231] text-white rounded-lg hover:bg-red-600 transition"
+          onClick={handleClose}
         >
-          {message.text}
-        </div>
+          <IoPower size={20} />
+        </button>
+        <input
+          type="text"
+          className="flex-1 p-3 border-2 rounded-lg text-sm border-[#c53b2d] bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c53b2d]"
+          placeholder="Type a message..."
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSendMessage(e)}
+        />
+        <button
+          className="ml-3 px-4 py-3 bg-[#d94231] text-white rounded-lg hover:bg-red-600 transition"
+          onClick={handleSendMessage}
+        >
+          <IoSend size={20} />
+        </button>
       </div>
-    ))}
-
-    {thinking && (
-      <div className="flex justify-start">
-        <div className="text-silver dark:text-gray-400 max-w-[70%] text-[16px] rounded-xl rounded-bl-none">
-          {typingText}
-        </div>
-      </div>
-    )}
-
-    <div ref={scrollEndRef} />
-  </div>
-
-  {/* Input Area */}
-  <div className="p-3 flex items-center border-t w-full bg-[#1e293b] absolute bottom-0 left-0 border-2 border-[#d94231] ">
-    <button
-      className="mr-3 px-4 py-3 bg-[#d94231] text-white rounded-lg hover:bg-red-600 transition"
-      onClick={handleClose}
-    >
-      <IoPower size={20} />
-    </button>
-    <input
-      type="text"
-      className="flex-1 p-3 border-2 rounded-lg text-sm border-[#c53b2d] bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c53b2d]"
-      placeholder="Type a message..."
-      value={userInput}
-      onChange={(e) => setUserInput(e.target.value)}
-      onKeyDown={(e) => e.key === "Enter" && handleSendMessage(e)}
-    />
-    <button
-      className="ml-3 px-4 py-3 bg-[#d94231] text-white rounded-lg hover:bg-red-600 transition"
-      onClick={handleSendMessage}
-    >
-      <IoSend size={20} />
-    </button>
-  </div>
-</motion.div>
-
+    </motion.div>
   );
 };
 

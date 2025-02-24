@@ -1,3 +1,5 @@
+import { preloadGIFs } from "./bot"
+
 export interface Slide {
   image: string;
 }
@@ -81,9 +83,10 @@ window.onload = () => {
       img.src = imageUrl;
     });
   };
-  
 
   preloadImages(slides);
 
   preloadImages(loading);
+
+  preloadGIFs();
 };

@@ -8,15 +8,11 @@ const avatarMap: { [key: string]: string } = {
   shy,
 };
 
-// Preload images on page startup
-const preloadImages = () => {
+export const preloadGIFs = () => {
   Object.values(avatarMap).forEach((src) => {
     const img = new Image();
     img.src = src;
   });
 };
-
-// Run preload function
-preloadImages();
 
 export default avatarMap;

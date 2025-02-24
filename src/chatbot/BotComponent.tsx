@@ -1,35 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoSend, IoPower } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { sendMessage } from "../apiCalls/ChatbotCalls";
 
-import emote_hi from "../bot/character/hi.gif";
-import laugh from "./character/laugh.gif";
-import broken from "./character/broken.gif";
-import fit from "./character/fit.gif";
-import hi from "./character/hi.gif";
-import bg from "./character/bg.gif";
-import think from "./character/think.gif";
-import sad from "./character/sad.gif";
-import love from "./character/love.gif";
-import shy from "./character/shy.gif";
-import savage from "./character/savage.gif";
+import avatarMap from "../resources/bot";
 
-// Map GIF names to their imported paths
-const avatarMap: { [key: string]: string } = {
-  laugh,
-  broken,
-  fit,
-  hi,
-  think,
-  sad,
-  love,
-  shy,
-  savage,
-  bg
-};
 
-const BotComponent = ({ handleChatButton }) => {
+
+
+const BotComponent = ({ handleChatButton}) => {
   const [messages, setMessages] = useState<any>([]);
   const [userInput, setUserInput] = useState("");
   const [sessionId, setSessionId] = useState("");

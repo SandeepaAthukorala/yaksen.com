@@ -19,14 +19,14 @@ interface projectData {
   project_links: { platform: string; url: string }[];
   project_desc: string;
   project_keyfeatures: string[];
-  project_showcase: { video_link: string[]; image_links: string[] };
+  project_showcase: { video_link: string[], image_links: string[], web_links: string[] };
 }
 
 export default function ProjectPage() {
   const [project, setProject] = useState<projectData>();
   const [loading, setLoading] = useState(true);
 
-  console.log(project);
+
 
   const { id } = useParams();
 
@@ -58,8 +58,11 @@ export default function ProjectPage() {
   const hasShowcaseItems =
     project.project_showcase &&
     (project.project_showcase.video_link.length > 0 ||
-      project.project_showcase.image_links.length > 0);
+      project.project_showcase.image_links.length > 0 ||
+      project.project_showcase.web_links.length > 0);
 
+
+  
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
@@ -76,8 +79,11 @@ export default function ProjectPage() {
       />
       {hasShowcaseItems && (
         <ProjectMedia
+
+          
           videos={project.project_showcase.video_link}
           gallery={project.project_showcase.image_links}
+          webLinks={project.project_showcase.web_links}
         />
       )}
       <Footer />

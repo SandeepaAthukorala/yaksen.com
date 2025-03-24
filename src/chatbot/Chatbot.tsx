@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import emote_hi from "./character/hi.gif";
-import ComingSoon from "./comingsoon";
 import BotComponent from "./BotComponent";
 
 const ChatBot: React.FC = () => {
   const [botShow, setBotShow] = useState(false);
+  const [isChatEnabled, setIsChatEnabled] = useState(false); // Set this true to show chat bot again
 
   const handleChatButton = () => {
     setBotShow(!botShow);
   };
+
+  if (!isChatEnabled) return null;
 
   return (
     <div className="fixed bottom-0 right-0 z-50 md:bottom-6 md:right-6">

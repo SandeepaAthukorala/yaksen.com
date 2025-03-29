@@ -24,7 +24,8 @@ import ChatBot from "./chatbot/Chatbot";
 import { Navigate } from "react-router-dom";
 
 function InhumanSpotifyRedirect() {
-  return <Navigate to="https://open.spotify.com/artist/3iSPNGQSuyncDeurJktdB2" replace />;
+  window.location.href = "https://open.spotify.com/artist/3iSPNGQSuyncDeurJktdB2";
+  return null;
 }
 
 export default function App() {

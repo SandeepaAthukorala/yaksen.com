@@ -21,10 +21,14 @@ import ProtectedRoute from "./components/protected/ProtectedRoute";
 
 import NotFound from "./pages/NotFound";
 import ChatBot from "./chatbot/Chatbot";
-import { Navigate } from "react-router-dom";
 
 function InhumanSpotifyRedirect() {
   window.location.href = "https://open.spotify.com/artist/3iSPNGQSuyncDeurJktdB2";
+  return null;
+}
+
+function InhumanYoutubeRedirect() {
+  window.location.href = "https://music.youtube.com/channel/UC1rWZW2MM5hVzIVqlpNHQUA";
   return null;
 }
 
@@ -44,6 +48,7 @@ export default function App() {
           <Route path="/help" element={<HelpCenter />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/inhuman-spotify" element={<InhumanSpotifyRedirect />} /> {/* Redirect path */}
+          <Route path="/inhuman-youtube-music" element={<InhumanYoutubeRedirect />} /> {/* Redirect path */}
           <Route path="*" element={<NotFound />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/admin/services" element={<AdminServices />} />

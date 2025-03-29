@@ -96,7 +96,7 @@ export default function Services() {
 
           <div className="text-center mt-8">
           <Link
-    to="https://instagram.com"
+    to="https://www.instagram.com/hey.yakira/"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"

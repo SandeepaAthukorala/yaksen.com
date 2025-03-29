@@ -21,6 +21,12 @@ import ProtectedRoute from "./components/protected/ProtectedRoute";
 
 import NotFound from "./pages/NotFound";
 import ChatBot from "./chatbot/Chatbot";
+import { Navigate } from "react-router-dom";
+
+function InhumanSpotifyRedirect() {
+  return <Navigate to="https://open.spotify.com/artist/3iSPNGQSuyncDeurJktdB2" replace />;
+}
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -36,6 +42,7 @@ export default function App() {
           <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/help" element={<HelpCenter />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/inhuman-spotify" element={<InhumanSpotifyRedirect />} /> {/* Redirect path */}
           <Route path="*" element={<NotFound />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/admin/services" element={<AdminServices />} />

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Power } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
-import comingSoonGif from "./character/loop.gif";
+const comingSoonGif = require("./character/loop.gif"); // URL not provided, keeping require
 
 const ComingSoon: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const { isDark } = useTheme();
@@ -12,7 +12,7 @@ const ComingSoon: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`w-full max-w-sm h-[65vh] md:h-[450px] shadow-lg rounded-xl overflow-hidden relative flex flex-col items-center justify-center border-2 border-[#c53b2d] p-6 
+      className={`w-full max-w-sm h-[65vh] md:h-[450px] shadow-lg rounded-xl overflow-hidden relative flex flex-col items-center justify-center border-2 border-[#c53b2d] p-6
         ${isDark ? "bg-[#0f1724] text-white" : "bg-white text-black"}`}
     >
       <button

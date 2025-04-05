@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import LogoImg from "../../assets/logo.png";
+const LogoImg = "https://res.cloudinary.com/das8wrfd1/image/upload/v1739760282/logo_owiqet.png";
 
 export default function Logo() {
   const navigate = useNavigate();

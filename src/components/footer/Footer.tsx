@@ -1,7 +1,7 @@
 import SocialLinks from "../SocialLinks";
 import FooterLinks from "./FooterLinks";
 import { useNavigate } from "react-router-dom";
-import LogoImg from "../../assets/logo.png";
+const LogoImg = "https://res.cloudinary.com/das8wrfd1/image/upload/v1739760282/logo_owiqet.png";
 
 export default function Footer() {
   const navigate = useNavigate();

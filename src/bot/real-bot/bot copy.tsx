@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import emote_hi from "./character/hi.gif";
+const emote_hi = "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822916/hi_j74hqj.gif";
 import ChatWindow from "./chatwindow";
 import LoginWindow from "./login";
 import { useTheme } from "../contexts/ThemeContext";

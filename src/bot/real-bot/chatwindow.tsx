@@ -2,34 +2,20 @@ import React from "react";
 import { Send, Power } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Import all GIFs explicitly
-import laugh from "./character/laugh.gif";
-import broken from "./character/broken.gif";
-import fit from "./character/fit.gif";
-import loop from "./character/loop.gif";
-import hi from "./character/hi.gif";
-import think from "./character/think.gif";
-import error from "./character/error.gif";
-import love from "./character/love.gif";
-import horay from "./character/horay.gif";
-import flirty from "./character/flirty.gif";
-import shy from "./character/shy.gif";
-import savage from "./character/savage.gif";
-
-// Map GIF names to their imported paths
+// Map GIF names to their Cloudinary URLs or require paths
 const avatarMap: { [key: string]: string } = {
-  laugh,
-  broken,
-  fit,
-  loop,
-  hi,
-  think,
-  error,
-  love,
-  horay,
-  flirty,
-  shy,
-  savage,
+  laugh: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822852/laugh_rcgbbn.gif",
+  broken: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822857/broken_psnird.gif",
+  fit: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743823112/fit_gqyic0.gif",
+  loop: require("./character/loop.gif"), // URL not provided
+  hi: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822916/hi_j74hqj.gif",
+  think: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822991/think_kex60v.gif",
+  error: require("./character/error.gif"), // URL not provided
+  love: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743822847/love_zagmld.gif",
+  horay: require("./character/horay.gif"), // URL not provided
+  flirty: require("./character/flirty.gif"), // URL not provided
+  shy: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743823102/shy_aphbmz.gif",
+  savage: "https://res.cloudinary.com/das8wrfd1/image/upload/v1743823121/savage_dnlj4j.gif",
 };
 
 interface ChatWindowProps {
@@ -76,7 +62,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
       <div className="w-full flex flex-col justify-start p-4 relative border-b border-gradient-to-r from-[#c53b2d] to-transparent">
         <div className="flex justify-between items-center">
           <img
-            src={avatarMap[avatarGif] || avatarMap["shy"]}
+            src={avatarMap[avatarGif] || avatarMap["shy"]} // Use the map here
             alt="Chat Avatar"
             className="w-16 h-16"
           />

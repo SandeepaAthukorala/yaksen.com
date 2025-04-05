@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Power } from "lucide-react";
-import chat_animation from "./character/shy.gif";
+const chat_animation = "https://res.cloudinary.com/das8wrfd1/image/upload/v1743823102/shy_aphbmz.gif";
 
 interface LoginWindowProps {
   onLogin: (name: string, email: string) => void;

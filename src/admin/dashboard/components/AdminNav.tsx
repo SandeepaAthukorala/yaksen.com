@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../../assets/logo.png";
+const Logo = "https://res.cloudinary.com/das8wrfd1/image/upload/v1739760282/logo_owiqet.png";
 
 const AdminNav = () => {
   const links = [

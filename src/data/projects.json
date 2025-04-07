@@ -1,0 +1,129 @@
+[
+  {
+    "_id": "67a3024a85b1dfa3d3bbae2b",
+    "project_title": "IN HUMAN <+>",
+    "project_sub_title": "Crafting Vibes",
+    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1738145531/Banner_ivzrbi.png",
+    "project_category_main": "AI-Driven Content Creation",
+    "project_category_sub": [],
+    "project_links": [
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/@InHuman-OG"
+      },
+      {
+        "platform": "spotify",
+        "url": "https://open.spotify.com/artist/3iSPNGQSuyncDeurJktdB2"
+      }
+    ],
+    "project_desc": "In Human is an experimental music project that pushes creative boundaries using AI-driven music composition and innovative storytelling. Focused on crafting unique vibes, unconventional structures, and genre-blending sounds, it challenges the norms of mainstream music. With a mix of AI-assisted production, human creativity, and deep emotions, In Human redefines the future of music, one track at a time.",
+    "project_keyfeatures": [
+      "AI-Driven Music Composition",
+      "Genre-Blending Soundscapes",
+      "Experimental Song Structures",
+      "Emotion-Infused AI Lyrics",
+      "Visual Storytelling Integration",
+      "Audience-Interactive Music",
+      "Tech-Enhanced Production",
+      "Unconventional Sound Design",
+      "Limitless Creative Evolution"
+    ],
+    "project_showcase": {
+      "video_link": [
+        "https://www.youtube.com/embed/Yno3JuuGx-4",
+        "https://www.youtube.com/embed/KrvX5xpI-Ls",
+        "https://www.youtube.com/embed/AGagVSuZqPs"
+      ],
+      "image_links": []
+    },
+    "__v": 0,
+    "order": 1
+  },
+  {
+    "_id": "67b58ee34c17adf6abc7be98",
+    "project_title": "GenAI Story Writer",
+    "project_sub_title": "",
+    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739951673/Screenshot_148_kfaxcg.webp",
+    "project_category_main": "AI-Driven Content Creation",
+    "project_category_sub": [],
+    "project_links": [
+      {
+        "platform": "web",
+        "url": "https://astro-ai-af73a.web.app/"
+      }
+    ],
+    "project_desc": "GenAI Story Writer is an advanced AI tool that generates creative and unique stories based on your input. Powered by LangChain, FastAPI, and Groq API, it offers seamless story creation with customizable elements like characters, genre, tone, and more. Its sleek frontend, built with React, Tailwind CSS, and Mantine UI, provides a smooth user experience.",
+    "project_keyfeatures": [
+      "Custom Story Generation",
+      "AI-Powered Writing",
+      "Fast & Efficient Backend",
+      "Modern UI"
+    ],
+    "project_showcase": {
+      "video_link": [],
+      "image_links": []
+    },
+    "__v": 0,
+    "order": 2
+  },
+  {
+    "_id": "67b5e1ba791428aa82505473",
+    "project_title": "Blush Bites",
+    "project_sub_title": "Taste the Joy in Every Bite!",
+    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972830/Web_Art_hzi8fw.jpg",
+    "project_category_main": "AI-Driven Content Creation",
+    "project_category_sub": [],
+    "project_links": [],
+    "project_desc": "Blush Bites is a vibrant short eats restaurant brought to life with AI-driven design. From its playful pink-themed branding to custom AI-generated logos, decals, and visuals, every element reflects a modern, inviting aesthetic. This project blends creativity and technology to craft a unique dining experience.",
+    "project_keyfeatures": [
+      "AI-Driven Branding",
+      "Modern & Minimalistic",
+      "Streamlined Visual Appeal"
+    ],
+    "project_showcase": {
+      "video_link": [],
+      "image_links": [
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739973069/2_icmhxy.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972838/5_daajjt.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972836/4_uhgcyy.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/1_ykjcv9.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/7_ggj25y.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/3_gi4vvu.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/8_jbwx7c.jpg",
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972834/6_dtqnue.jpg"
+      ]
+    },
+    "__v": 0,
+    "order": 3
+  },
+  {
+    "_id": "67d2a1f549f0f413673f85ec",
+    "project_title": "Web Development",
+    "project_sub_title": "Crafting Unique Digital Experiences",
+    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1741859282/banner_lz8sp0.jpg",
+    "project_category_main": "AI-Driven Content Creation",
+    "project_category_sub": [],
+    "project_links": [],
+    "project_desc": "At Digital Forge, we don’t just build websites—we create experiences. We blend technology and creativity to deliver websites that are as functional as they are visually stunning. With a focus on fast development times, extreme customization, and eye-catching design, we craft digital spaces that stand out from the crowd. Our team works closely with you to ensure your vision comes to life exactly how you imagine it—quickly and beautifully.",
+    "project_keyfeatures": [
+      "Fast Development Time",
+      "Super Customized",
+      "Visually Appealing",
+      "Mobile Responsive",
+      "Ongoing Support and Maintenance"
+    ],
+    "project_showcase": {
+      "video_link": [],
+      "image_links": [],
+      "web_links": [
+        "https://sample-web-portfolio-1.pages.dev/",
+        "https://web-sample-business-portfolio-kitchen.pages.dev/",
+        "https://web-sample-hotel-1.pages.dev/",
+        "https://web-sample-textile-1.pages.dev/",
+        "https://gl-seeds-dys.pages.dev/"
+      ]
+    },
+    "__v": 0,
+    "order": 4
+  }
+]

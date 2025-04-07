@@ -1,0 +1,120 @@
+[
+  {
+    "_id": "6797104691f7bb995721d172",
+    "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739950572/Sandeepa_pvvibe.webp",
+    "member_name": "Sandeepa Athukorala",
+    "member_position": "CEO & AI Visionary",
+    "member_mail": "Sandeepa@yaksen.com",
+    "member_socialmedia": [
+      {
+        "platform": "github",
+        "link": "https://github.com/SandeepaAthukorala",
+        "_id": "6797104691f7bb995721d173"
+      },
+      {
+        "platform": "facebook",
+        "link": "https://web.facebook.com/Sanda.TheOG/",
+        "_id": "6797104691f7bb995721d174"
+      },
+      {
+        "platform": "linkedin",
+        "link": "https://www.linkedin.com/in/sandeepaathukorala/",
+        "_id": "6797104691f7bb995721d175"
+      }
+    ],
+    "member_about": "I am Sandeepa Dilshan Athukorala, Co-Founder & AI Visionary at YAKSEN, born in the year 2005. I am focused on making YAKSEN the leading AI solution agency on the island. Passionate about AI research, creating music, and outdoor adventures, driven by innovation and impactful projects.",
+    "member_experties": [
+      "AI-Driven Music Composition & Mixing",
+      "AI-Assisted Research & Data Analysis",
+      "Development of AI-Integrated Tools & Solutions",
+      "AI-Powered Content Creation",
+      "Digital Marketing Strategy & Execution",
+      "Brand Digitalization & Transformation",
+      "AI in Automation & Process Optimization",
+      "AI Ethics & Responsible Innovation"
+    ],
+    "member_featured_projects": [
+      "67a3024a85b1dfa3d3bbae2b",
+      "67b5e1ba791428aa82505473",
+      "67d2a1f549f0f413673f85ec"
+    ],
+    "__v": 0,
+    "url_head": "sandeepa",
+    "member_freelance_sites": [
+      {
+        "platform": "fiverr",
+        "link": "https://www.fiverr.com/users/dilsana"
+      }
+    ],
+    "order": 1
+  },
+  {
+    "_id": "67a30e4e6b7511e1ef0d3458",
+    "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739950572/Bewan_in8tsk.webp",
+    "member_name": "Bewan Chandupa",
+    "member_position": "CMO & AI Creative Lead",
+    "member_mail": "Bewan@yaksen.com",
+    "member_socialmedia": [
+      {
+        "platform": "facebook",
+        "link": "https://web.facebook.com/bevan.thilakarathna",
+        "_id": "67a30e4e6b7511e1ef0d3459"
+      },
+      {
+        "platform": "linkedin",
+        "link": "https://www.linkedin.com/in/bewan-thilakarathne-b66131340/"
+      }
+    ],
+    "member_about": "Bewan Chandupa is the Co-Founder & AI Creative Lead at YAKSEN. His vision for this company is to make it the leading AI solution agency on the island. With a passion for graphic design, video editing, and creativity using AI, he makes ideas come into reality with the perfect combination of art and technology. He likes to play cricket, do some gaming, watch films and TV series, create YouTube content, and always try to do something new to inspire anyone in his free time.",
+    "member_experties": [
+      "AI-Driven Graphic Design & Visual Creativity",
+      "Presentation Design & Branding",
+      "Product Photography Editing & Enhancement",
+      "AI-Assisted Video Editing & Motion Graphics",
+      "Content Creation for Digital Platforms",
+      "AI-Powered Art & Generative Design",
+      "YouTube Content Strategy & Production",
+      "Creative Direction & Aesthetic Development"
+    ],
+    "member_featured_projects": [],
+    "__v": 0,
+    "url_head": "bewan",
+    "order": 2
+  },
+  {
+    "_id": "67a2dfa6b1ecd4f2770c65dc",
+    "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1740117790/daham_hutx9n.webp",
+    "member_name": "Daham Gimhana",
+    "member_position": "CIO & Lead AI Engineer",
+    "member_mail": "Daham@yaksen.com",
+    "member_socialmedia": [
+      {
+        "platform": "github",
+        "link": "https://github.com/wmdgimhana",
+        "_id": "67a2dfa6b1ecd4f2770c65dd"
+      },
+      {
+        "platform": "facebook",
+        "link": "https://www.facebook.com/daham.gimhana.5"
+      },
+      {
+        "platform": "linkedin",
+        "link": "https://www.linkedin.com/in/wmd-gimhana-46622b305/"
+      }
+    ],
+    "member_about": "Daham Gimhana is a tech innovator born in 2005, having a deep passion for Cybersecurity and AI-driven solutions. He is always on the lookout to bring about something big, indulging in intelligent system development to push the limits of technology. His vision is to blend creativity with bleeding-edge advancements and create a real impact in the space of AI and cybersecurity. ",
+    "member_experties": [
+      "Machine Learning (Specialized in Natural Language Processing)",
+      "AI Chatbot Development",
+      "Retrieval-Augmented Generation (RAG) Application Development",
+      "Penetration Testing",
+      "Web Development (MERN Stack)"
+    ],
+    "member_featured_projects": [
+      "67b58ee34c17adf6abc7be98"
+    ],
+    "__v": 0,
+    "url_head": "daham",
+    "order": 3
+  }
+]

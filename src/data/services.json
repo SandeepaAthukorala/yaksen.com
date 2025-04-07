@@ -1,0 +1,574 @@
+[
+  {
+    "_id": "67971b0f63395f0cafc8f171",
+    "service_title": "AI-Driven Content Creation",
+    "service_icon_type": "sparkle",
+    "service_desc": "Leverage AI to create high-quality content efficiently, saving time and resources while maximizing impact.",
+    "service_category": "AI Content Creation",
+    "sub_services": [
+      {
+        "sub_title": "AI-Driven Content Creation",
+        "sub_desc": "Craft compelling blog posts and engaging social media content that truly resonate with your audience—all powered by advanced AI.",
+        "key_features": [
+          {
+            "keyfeature_title": "Tailored Tone & Style",
+            "keyfeature_desc": "Effortlessly match your brand's unique voice with AI that adapts to your style.",
+            "_id": "67971b0f63395f0cafc8f174"
+          },
+          {
+            "keyfeature_title": "Smart Keyword Integration",
+            "keyfeature_desc": "Boost your visibility with trending keywords seamlessly embedded into your content.",
+            "_id": "67971b0f63395f0cafc8f175"
+          },
+          {
+            "keyfeature_title": "Seamless Content Repurposing",
+            "keyfeature_desc": "Instantly transform a single piece of content into multiple formats for all your channels.",
+            "_id": "67971b0f63395f0cafc8f176"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Save Time & Cut Costs",
+            "bene_desc": "Streamline your content production so you can focus on what matters most.",
+            "_id": "67971b0f63395f0cafc8f177"
+          },
+          {
+            "bene_title": "Consistent Brand Voice",
+            "bene_desc": "Ensure every post reflects your brand's personality perfectly.",
+            "_id": "67971b0f63395f0cafc8f178"
+          },
+          {
+            "bene_title": "Enhanced Audience Engagement",
+            "bene_desc": "Captivate your audience with compelling, share-worthy content.",
+            "_id": "67971b0f63395f0cafc8f179"
+          },
+          {
+            "bene_title": "Scalable Content Production",
+            "bene_desc": "Multiply your content output without compromising quality.",
+            "_id": "67971b0f63395f0cafc8f17a"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Discovery & Brief Submission",
+            "process_desc": "Share your brand vision, goals, and target audience insights.",
+            "_id": "67971b0f63395f0cafc8f17b"
+          },
+          {
+            "process_title": "AI-Driven Content Creation",
+            "process_desc": "Our AI crafts personalized content using advanced algorithms.",
+            "_id": "67971b0f63395f0cafc8f17c"
+          },
+          {
+            "process_title": "Collaborative Review & Refinement",
+            "process_desc": "Review and refine the content with our expert team for perfect results.",
+            "_id": "67971b0f63395f0cafc8f17d"
+          },
+          {
+            "process_title": "Final Delivery & Launch",
+            "process_desc": "Receive your ready-to-publish content, optimized for maximum impact.",
+            "_id": "67971b0f63395f0cafc8f17e"
+          }
+        ],
+        "_id": "67971b0f63395f0cafc8f172",
+        "project_ids": [
+          "67a3024a85b1dfa3d3bbae2b"
+        ],
+        "order": 1
+      },
+      {
+        "sub_title": "AI-Driven Commercial Videos",
+        "sub_desc": "Develop compelling and eye-catching videos that elevate your brand—crafted intelligently with our AI.",
+        "key_features": [
+          {
+            "keyfeature_title": "Automated Video Production",
+            "keyfeature_desc": "Generate high-quality videos in minutes with intuitive AI platforms available.",
+            "_id": "67971b0f63395f0cafc8f180"
+          },
+          {
+            "keyfeature_title": "Smart Scene Selection",
+            "keyfeature_desc": "Let AI choose the best scenes to bring your story to life dynamically.",
+            "_id": "67971b0f63395f0cafc8f181"
+          },
+          {
+            "keyfeature_title": "Innovative Text-to-Video",
+            "keyfeature_desc": "Turn simple text into engaging visual narratives effortlessly.",
+            "_id": "67971b0f63395f0cafc8f182"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Rapid Production",
+            "bene_desc": "Get stunning videos delivered faster than ever, saving you time.",
+            "_id": "67971b0f63395f0cafc8f184"
+          },
+          {
+            "bene_title": "Budget-Friendly Solutions",
+            "bene_desc": "Cut down production costs while maintaining premium quality.",
+            "_id": "67971b0f63395f0cafc8f185"
+          },
+          {
+            "bene_title": "Boost Brand Visibility",
+            "bene_desc": "Attract more eyes with videos designed to make a memorable impact.",
+            "_id": "67971b0f63395f0cafc8f186"
+          },
+          {
+            "bene_title": "Multi-Platform Adaptability",
+            "bene_desc": "Create video content that shines on every platform effortlessly.",
+            "_id": "67971b0f63395f0cafc8f187"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Discovery & Brief Submission",
+            "process_desc": "Share your brand vision, goals, and target audience insights.",
+            "_id": "67971b0f63395f0cafc8f188"
+          },
+          {
+            "process_title": "AI-Driven Content Creation",
+            "process_desc": "Our AI crafts personalized content using advanced algorithms.",
+            "_id": "67971b0f63395f0cafc8f189"
+          },
+          {
+            "process_title": "Collaborative Review & Refinement",
+            "process_desc": "Review and refine the content with our expert team for perfect results.",
+            "_id": "67971b0f63395f0cafc8f18a"
+          },
+          {
+            "process_title": "Final Delivery & Launch",
+            "process_desc": "Receive your ready-to-publish content, optimized for maximum impact.",
+            "_id": "67971b0f63395f0cafc8f18b"
+          }
+        ],
+        "_id": "67971b0f63395f0cafc8f17f",
+        "order": 2
+      },
+      {
+        "sub_title": "Content Optimization with AI",
+        "sub_desc": "Refine and enhance your content to boost readability and SEO performance—making every word count.",
+        "key_features": [
+          {
+            "keyfeature_title": "Advanced SEO Insights",
+            "keyfeature_desc": "Unlock high-ranking keywords for superior search performance.",
+            "_id": "67971b0f63395f0cafc8f1a7"
+          },
+          {
+            "keyfeature_title": "Enhanced Readability",
+            "keyfeature_desc": "Transform complex content into clear, engaging copy.",
+            "_id": "67971b0f63395f0cafc8f1a8"
+          },
+          {
+            "keyfeature_title": "Strategic Content Gap Analysis",
+            "keyfeature_desc": "Identify opportunities to amplify your content’s impact.",
+            "_id": "67971b0f63395f0cafc8f1a9"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Top Search Rankings",
+            "bene_desc": "Elevate your site with content optimized for the best search rankings.",
+            "_id": "67971b0f63395f0cafc8f1ab"
+          },
+          {
+            "bene_title": "Maximized Engagement",
+            "bene_desc": "Keep your audience hooked with perfectly tuned, engaging content.",
+            "_id": "67971b0f63395f0cafc8f1ac"
+          },
+          {
+            "bene_title": "Effortless Repurposing",
+            "bene_desc": "Breathe new life into existing content for various channels.",
+            "_id": "67971b0f63395f0cafc8f1ad"
+          },
+          {
+            "bene_title": "Enhanced Content Value",
+            "bene_desc": "Transform every piece into a powerful asset for your brand.",
+            "_id": "67971b0f63395f0cafc8f1ae"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Discovery & Brief Submission",
+            "process_desc": "Share your brand vision, goals, and target audience insights.",
+            "_id": "67971b0f63395f0cafc8f1af"
+          },
+          {
+            "process_title": "AI-Driven Content Creation",
+            "process_desc": "Our AI crafts personalized content using advanced algorithms.",
+            "_id": "67971b0f63395f0cafc8f1b0"
+          },
+          {
+            "process_title": "Collaborative Review & Refinement",
+            "process_desc": "Review and refine the content with our expert team for perfect results.",
+            "_id": "67971b0f63395f0cafc8f1b1"
+          },
+          {
+            "process_title": "Final Delivery & Launch",
+            "process_desc": "Receive your ready-to-publish content, optimized for maximum impact.",
+            "_id": "67971b0f63395f0cafc8f1b2"
+          }
+        ],
+        "_id": "67971b0f63395f0cafc8f1a6",
+        "order": 3
+      }
+    ],
+    "__v": 0,
+    "order": 1
+  },
+  {
+    "_id": "67971b0f63395f0cafc8f18c",
+    "service_title": "AI-Driven Marketing Solutions",
+    "service_icon_type": "rocket",
+    "service_desc": "Boost your marketing with friendly AI for fast, smart, and proven results.",
+    "service_category": "AI Marketing Solutions",
+    "sub_services": [
+      {
+        "sub_title": "Smart AI Marketing",
+        "sub_desc": "Supercharge your campaigns with our friendly AI making smart, data-driven decisions.",
+        "key_features": [
+          {
+            "keyfeature_title": "Predictive Analysis",
+            "keyfeature_desc": "Forecast trends and spot opportunities with smart AI insights.",
+            "_id": "67971b0f63395f0cafc8f18d"
+          },
+          {
+            "keyfeature_title": "Campaign Automation",
+            "keyfeature_desc": "Automate tasks effortlessly to keep campaigns on track.",
+            "_id": "67971b0f63395f0cafc8f18e"
+          },
+          {
+            "keyfeature_title": "Data-Driven Insights",
+            "keyfeature_desc": "Gain clear insights to fine-tune your strategy.",
+            "_id": "67971b0f63395f0cafc8f18f"
+          },
+          {
+            "keyfeature_title": "Personalized Marketing",
+            "keyfeature_desc": "Tailor your content for that personal touch.",
+            "_id": "67971b0f63395f0cafc8f190"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Data-Backed Decisions",
+            "bene_desc": "Make smart, data-powered choices.",
+            "_id": "67971b0f63395f0cafc8f191"
+          },
+          {
+            "bene_title": "Improved ROI",
+            "bene_desc": "Enjoy better returns on every marketing dollar.",
+            "_id": "67971b0f63395f0cafc8f192"
+          },
+          {
+            "bene_title": "Increased Efficiency",
+            "bene_desc": "Streamline your work and boost productivity.",
+            "_id": "67971b0f63395f0cafc8f193"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Data Gathering",
+            "process_desc": "Collect the right data from multiple sources.",
+            "_id": "67971b0f63395f0cafc8f195"
+          },
+          {
+            "process_title": "AI Campaign Setup",
+            "process_desc": "Set up your campaigns easily with our AI.",
+            "_id": "67971b0f63395f0cafc8f196"
+          },
+          {
+            "process_title": "Campaign Launch & Optimization",
+            "process_desc": "Launch and optimize in real time.",
+            "_id": "67971b0f63395f0cafc8f197"
+          },
+          {
+            "process_title": "Performance Tracking",
+            "process_desc": "Monitor progress and get actionable feedback.",
+            "_id": "67971b0f63395f0cafc8f198"
+          }
+        ],
+        "_id": "67971b0f63395f0cafc8f18c",
+        "order": 1
+      },
+      {
+        "sub_title": "Smart AI Email Campaigns",
+        "sub_desc": "Engage your audience with tailored email campaigns powered by our smart AI.",
+        "key_features": [
+          {
+            "keyfeature_title": "AI-Powered Segmentation",
+            "keyfeature_desc": "Segment your list smartly for precise targeting.",
+            "_id": "67971b0f63395f0cafc8f19a"
+          },
+          {
+            "keyfeature_title": "Personalized Email Content",
+            "keyfeature_desc": "Craft custom emails that truly connect.",
+            "_id": "67971b0f63395f0cafc8f19b"
+          },
+          {
+            "keyfeature_title": "A/B Testing & Optimization",
+            "keyfeature_desc": "Test and tweak emails for peak performance.",
+            "_id": "67971b0f63395f0cafc8f19c"
+          },
+          {
+            "keyfeature_title": "Automated Email Scheduling",
+            "keyfeature_desc": "Schedule emails to hit inboxes at the perfect time.",
+            "_id": "67971b0f63395f0cafc8f19d"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Higher Engagement Rates",
+            "bene_desc": "Boost opens and clicks with personalized emails.",
+            "_id": "67971b0f63395f0cafc8f19e"
+          },
+          {
+            "bene_title": "Increased Conversions",
+            "bene_desc": "Drive more sales with the right message.",
+            "_id": "67971b0f63395f0cafc8f19f"
+          },
+          {
+            "bene_title": "Time Savings",
+            "bene_desc": "Save time with automated email management.",
+            "_id": "67971b0f63395f0cafc8f1a0"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Email List Analysis",
+            "process_desc": "Analyze your list for smart segmentation.",
+            "_id": "67971b0f63395f0cafc8f1a2"
+          },
+          {
+            "process_title": "AI-Enhanced Content Creation",
+            "process_desc": "Generate engaging email content with AI help.",
+            "_id": "67971b0f63395f0cafc8f1a3"
+          },
+          {
+            "process_title": "Campaign Setup & A/B Testing",
+            "process_desc": "Set up, test, and schedule campaigns with ease.",
+            "_id": "67971b0f63395f0cafc8f1a4"
+          },
+          {
+            "process_title": "Performance Measurement & Optimization",
+            "process_desc": "Track results and fine-tune for success.",
+            "_id": "67971b0f63395f0cafc8f1a5"
+          }
+        ],
+        "_id": "67971b0f63395f0cafc8f199",
+        "order": 2
+      }
+    ],
+    "__v": 0,
+    "order": 2
+  },
+  {
+    "_id": "67976d99103e1c8567a4c6ce",
+    "service_title": "AI-Driven Design & Development Services",
+    "service_icon_type": "circuit_board",
+    "service_desc": "Turn your product and design dreams into reality with our AI solutions—streamlined, smart, and stunning.",
+    "service_category": "AI Design & Development Services",
+    "sub_services": [
+      {
+        "sub_title": "AI Product Visualization",
+        "sub_desc": "Bring your product ideas to life with AI. Enjoy lifelike 3D renders, realistic materials, and interactive views that wow.",
+        "key_features": [
+          {
+            "keyfeature_title": "AI-Powered 3D Rendering",
+            "keyfeature_desc": "Create detailed 3D models effortlessly.",
+            "_id": "67976d99103e1c8567a4c6d0"
+          },
+          {
+            "keyfeature_title": "Realistic Material Simulation",
+            "keyfeature_desc": "Apply true-to-life textures and lighting.",
+            "_id": "67976d99103e1c8567a4c6d1"
+          },
+          {
+            "keyfeature_title": "Automated Design Iteration",
+            "keyfeature_desc": "Generate design variations quickly.",
+            "_id": "67976d99103e1c8567a4c6d2"
+          },
+          {
+            "keyfeature_title": "Interactive Product Views",
+            "keyfeature_desc": "Explore designs from every angle.",
+            "_id": "67976d99103e1c8567a4c6d3"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Clear Product Vision",
+            "bene_desc": "See your product in lifelike detail before production.",
+            "_id": "67976d99103e1c8567a4c6d4"
+          },
+          {
+            "bene_title": "Quick Launch",
+            "bene_desc": "Speed up design and market entry.",
+            "_id": "67976d99103e1c8567a4c6d6"
+          },
+          {
+            "bene_title": "Cost-Efficient",
+            "bene_desc": "Cut expensive revisions with precise visuals.",
+            "_id": "67976d99103e1c8567a4c6d7"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Submit Your Concept",
+            "process_desc": "Share your ideas or sketches.",
+            "_id": "67976d99103e1c8567a4c6d8"
+          },
+          {
+            "process_title": "AI Visualization",
+            "process_desc": "Watch AI create lifelike 3D models.",
+            "_id": "67976d99103e1c8567a4c6d9"
+          },
+          {
+            "process_title": "Review & Refine",
+            "process_desc": "Give feedback to perfect the design.",
+            "_id": "67976d99103e1c8567a4c6da"
+          },
+          {
+            "process_title": "Final Delivery",
+            "process_desc": "Get your polished product visuals.",
+            "_id": "67976d99103e1c8567a4c6db"
+          }
+        ],
+        "_id": "67976d99103e1c8567a4c6cf",
+        "order": 1
+      },
+      {
+        "sub_title": "AI-Integrated Website Development",
+        "sub_desc": "Craft smart, stunning websites with AI. Enjoy seamless design, fast performance, and engaging user experiences.",
+        "key_features": [
+          {
+            "keyfeature_title": "AI Content Creation",
+            "keyfeature_desc": "Effortlessly generate captivating content.",
+            "_id": "67976d99103e1c8567a4c6dd"
+          },
+          {
+            "keyfeature_title": "Personalized UX",
+            "keyfeature_desc": "Tailor experiences for every visitor.",
+            "_id": "67976d99103e1c8567a4c6de"
+          },
+          {
+            "keyfeature_title": "Code Optimization",
+            "keyfeature_desc": "Boost speed with automated code tweaks.",
+            "_id": "67976d99103e1c8567a4c6df"
+          },
+          {
+            "keyfeature_title": "Smart Chatbot",
+            "keyfeature_desc": "Offer instant support with AI chatbots.",
+            "_id": "67976d99103e1c8567a4c6e0"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Quick Development",
+            "bene_desc": "Launch faster and cut costs.",
+            "_id": "67976d99103e1c8567a4c6e1"
+          },
+          {
+            "bene_title": "Engaging Experience",
+            "bene_desc": "Keep users happy and on board.",
+            "_id": "67976d99103e1c8567a4c6e2"
+          },
+          {
+            "bene_title": "Top Performance",
+            "bene_desc": "Enjoy lightning-fast, optimized sites.",
+            "_id": "67976d99103e1c8567a4c6e3"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Brief & Planning",
+            "process_desc": "Share your vision.",
+            "_id": "67976d99103e1c8567a4c6e5"
+          },
+          {
+            "process_title": "AI Design & Development",
+            "process_desc": "We craft your site with AI.",
+            "_id": "67976d99103e1c8567a4c6e6"
+          },
+          {
+            "process_title": "Testing & Review",
+            "process_desc": "Fine-tune based on your feedback.",
+            "_id": "67976d99103e1c8567a4c6e7"
+          },
+          {
+            "process_title": "Launch & Maintenance",
+            "process_desc": "Go live with ongoing support.",
+            "_id": "67976d99103e1c8567a4c6e8"
+          }
+        ],
+        "_id": "67976d99103e1c8567a4c6dc",
+        "order": 2
+      },
+      {
+        "sub_title": "AI-Integrated Mobile App Development",
+        "sub_desc": "Boost your app with smart AI features that enhance performance and fun. Enjoy intelligent integrations for a seamless experience.",
+        "key_features": [
+          {
+            "keyfeature_title": "Smart Feature Integration",
+            "keyfeature_desc": "Add AI-driven features like recommendations and voice control.",
+            "_id": "67976d99103e1c8567a4c6ea"
+          },
+          {
+            "keyfeature_title": "Automated Testing",
+            "keyfeature_desc": "Ensure top quality with AI testing.",
+            "_id": "67976d99103e1c8567a4c6eb"
+          },
+          {
+            "keyfeature_title": "User Analytics",
+            "keyfeature_desc": "Leverage data for continuous improvements.",
+            "_id": "67976d99103e1c8567a4c6ec"
+          },
+          {
+            "keyfeature_title": "AI Automation",
+            "keyfeature_desc": "Automate tasks to save time.",
+            "_id": "67976d99103e1c8567a4c6ed"
+          }
+        ],
+        "benefits": [
+          {
+            "bene_title": "Smarter Performance",
+            "bene_desc": "Enjoy personalized, intelligent app behavior.",
+            "_id": "67976d99103e1c8567a4c6ee"
+          },
+          {
+            "bene_title": "Better Engagement",
+            "bene_desc": "Keep users hooked with innovative features.",
+            "_id": "67976d99103e1c8567a4c6ef"
+          },
+          {
+            "bene_title": "Quick Development",
+            "bene_desc": "Accelerate app creation with AI automation.",
+            "_id": "67976d99103e1c8567a4c6f0"
+          }
+        ],
+        "our_process": [
+          {
+            "process_title": "Consultation & Planning",
+            "process_desc": "Discuss your vision.",
+            "_id": "67976d99103e1c8567a4c6f2"
+          },
+          {
+            "process_title": "Feature Development",
+            "process_desc": "Integrate AI seamlessly.",
+            "_id": "67976d99103e1c8567a4c6f3"
+          },
+          {
+            "process_title": "Testing & Refinement",
+            "process_desc": "Polish with thorough testing.",
+            "_id": "67976d99103e1c8567a4c6f4"
+          },
+          {
+            "process_title": "Deployment & Maintenance",
+            "process_desc": "Launch and keep it running smoothly.",
+            "_id": "67976d99103e1c8567a4c6f5"
+          }
+        ],
+        "_id": "67976d99103e1c8567a4c6e9",
+        "order": 3
+      }
+    ],
+    "__v": 0,
+    "order": 3
+  }
+]

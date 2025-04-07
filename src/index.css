@@ -22,6 +22,16 @@
   display: none;
 }
 
+.separator-line {
+  width: 70%; /* Sets the width to 50% of the container */
+  border-top: 2px dotted #FF6347; /* Adjust this color to match your theme (example: Tomato) */
+  margin: 40px auto; /* Centering the separator horizontally */
+}
+
+.separator-line.dark {
+  border-top: 2px dotted #4B5563; /* Darker color for dark mode */
+}
+
 /* From Uiverse.io by bek_uz_time */
 .loader {
   position: relative;

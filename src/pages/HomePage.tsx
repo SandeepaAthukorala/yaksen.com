@@ -18,12 +18,12 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <About />
-      {<Services />}
+      {/*<Services / >*/}
       <Packages />
       {/* <Technologies /> */}
       <Projects />
       <Testimonials />
-      <MeetYakira />
+      {/*<MeetYakira />*/}
       <Contact />
       <Footer />
       <ToastContainer position="bottom-right" theme="colored" />

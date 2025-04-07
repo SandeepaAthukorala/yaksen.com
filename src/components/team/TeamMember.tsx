@@ -26,7 +26,7 @@ export default function TeamMember({
   return (
     <Link to={`/team/${id}`} className="block text-center group">
       <div className="relative group">
-        <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden">
+        <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden">
           <img
             src={image}
             alt={name}

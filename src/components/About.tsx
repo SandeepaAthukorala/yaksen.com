@@ -51,7 +51,7 @@ import { useEffect, useState } from "react";
               <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
                 Meet the Crew 🫂
               </h3>
-              <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 justify-items-center"> {/* Added justify-items-center and changed lg:grid-cols-3 to lg:grid-cols-4 */}
                 {team.map((member) => (
                   <TeamMember
                     key={member._id}

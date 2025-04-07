@@ -5,7 +5,7 @@ import {
   FaLinkedin,
   FaYoutube,
   FaInstagram,
-} from "react-icons/fa6"; 
+} from "react-icons/fa6";
 
 import {
   TbBrandFiverr,
@@ -22,8 +22,10 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import NotFound from "../NotFound";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
-import { getFeaturedProjects, getSingleMember } from "../../apiCalls/ApiCalls";
+import { getFeaturedProjects } from "../../apiCalls/ApiCalls"; // Keep if needed, but local fetch is implemented
 import Loading from "../Loading";
+import teamData from "../../data/team.json";
+import projectsData from "../../data/projects.json"; // Import projects data
 
 interface SocialMedia {
   platform: string;
@@ -35,6 +37,7 @@ interface FreeLance {
 }
 
 interface MemberData {
+  _id: string;
   member_image_link: string;
   member_name: string;
   member_position: string;
@@ -56,52 +59,88 @@ interface projectData {
   project_category_sub: string[];
   project_desc: string;
   project_keyfeatures: string[];
-  project_showcase: { video_link: string[]; image_links: string[] };
+  project_showcase: { video_link: string[]; image_links: string[]; web_links?: string[] }; // Added web_links optional
 }
 
+
 export default function TeamMemberPage() {
-  const [member, setMember] = useState<MemberData>();
+  const [member, setMember] = useState<MemberData | undefined>(undefined); // Initialize as undefined
   const [featuredProjects, setFeaturedProjects] = useState<projectData[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const getMember = async (id: string | undefined) => {
-    try {
-      const res = await getSingleMember(id);
-      setMember(res.data);
-    } catch (error) {}
-  };
-
-  const getFeaturedProjectData = async (id: string | undefined) => {
-    try {
-      const res = await getFeaturedProjects(id);
-      setFeaturedProjects(res);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getMember(id);
-    getFeaturedProjectData(id);
-  }, []);
-
-  useScrollToTop();
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>(); // Ensure id type is string
   const navigate = useNavigate();
 
-  if (loading) {
-    return <Loading />;
-  }
+  // Fetch Member Data Locally
+  const getMember = (memberId: string | undefined) => {
+    if (!memberId) {
+      console.warn("TeamMemberPage: ID is undefined");
+      setMember(undefined);
+      setLoading(false); // Stop loading if no ID
+      return;
+    }
+    console.log("TeamMemberPage: Attempting to find member with ID:", memberId);
+    const foundMember = (teamData as MemberData[]).find(m => m._id === memberId);
+    if (foundMember) {
+      setMember(foundMember);
+      console.log("TeamMemberPage: Member found:", foundMember.member_name);
+    } else {
+      console.warn("TeamMemberPage: Member not found for ID:", memberId);
+      setMember(undefined);
+    }
+    // setLoading(false); // Let getFeaturedProjectData handle final loading state
+  };
 
-  if (!member) {
-    return <NotFound />;
-  }
+  // Fetch Featured Projects Data Locally
+  const getFeaturedProjectData = (memberData: MemberData | undefined) => {
+    if (memberData && memberData.member_featured_projects && memberData.member_featured_projects.length > 0) {
+      const projectIds = memberData.member_featured_projects;
+      console.log("TeamMemberPage: Fetching featured projects for IDs:", projectIds);
+      // Filter projectsData based on the project IDs associated with the member
+      const foundProjects = (projectsData as projectData[]).filter(p => projectIds.includes(p._id));
+      setFeaturedProjects(foundProjects);
+      console.log("TeamMemberPage: Found featured projects:", foundProjects.length);
+    } else {
+      setFeaturedProjects([]);
+      console.log("TeamMemberPage: No featured projects for member:", memberData?.member_name);
+    }
+    setLoading(false); // Set loading false after projects are processed
+  };
+
+
+  useEffect(() => {
+    setLoading(true); // Start loading
+    getMember(id); // Fetch member first
+  }, [id]); // Depend only on id
+
+  useEffect(() => {
+    // This effect runs after the member state is updated
+    if (member !== undefined) { // Check if member state is set (even if null/not found)
+        getFeaturedProjectData(member); // Fetch projects based on the found member
+    } else if (!loading && !member) {
+        // If loading is finished and member is still undefined (not found), ensure loading is false
+        setLoading(false);
+    }
+  }, [member]); // Depend on member state
+
+
+  useScrollToTop();
 
   const handleProjectClick = (projectId: string) => {
     navigate(`/projects/${projectId}`);
   };
+
+  if (loading) {
+    console.log("TeamMemberPage: Rendering Loading component");
+    return <Loading />;
+  }
+
+  if (!member) {
+    console.log("TeamMemberPage: Rendering NotFound component because member is not found for ID:", id);
+    return <NotFound />;
+  }
+
+  console.log("TeamMemberPage: Rendering member page for:", member.member_name);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -175,7 +214,7 @@ export default function TeamMemberPage() {
                     </div>
 
                     {/* Freelance Sites Section */}
-                    {member.member_freelance_sites && (
+                    {member.member_freelance_sites && member.member_freelance_sites.length > 0 && (
                     <div className="flex space-x-4 justify-center mt-4">
                       {member.member_freelance_sites.map((item, index) => (
                         <a
@@ -231,12 +270,12 @@ export default function TeamMemberPage() {
                   </p>
                 </div>
 
-                {member.member_experties && (
+                {member.member_experties && member.member_experties.length > 0 && (
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Expertise
                     </h2>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {member.member_experties.map((item, index) => (
                         <div
                           key={index}
@@ -250,7 +289,7 @@ export default function TeamMemberPage() {
                   </div>
                 )}
 
-                {featuredProjects && (
+                {featuredProjects && featuredProjects.length > 0 && (
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Featured Projects
@@ -265,17 +304,17 @@ export default function TeamMemberPage() {
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                           }}
-                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1"
+                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 min-h-[150px] flex flex-col justify-end" // Added min-height and flex for content positioning
                         >
                           {/* Overlay */}
-                          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
+                          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
 
                           {/* Content */}
                           <div className="relative z-10">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                            <h3 className="text-lg font-semibold text-white mb-1"> {/* Adjusted margin */}
                               {project.project_title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            <p className="text-gray-200 text-sm"> {/* Adjusted text color */}
                               {project.project_sub_title}
                             </p>
                           </div>

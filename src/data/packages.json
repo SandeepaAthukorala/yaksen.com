@@ -1,9 +1,23 @@
-{ 
+{
   "packages": [
     {
-      "id": 1,
+      "id": 0,
       "title": "Starter Online Presence",
-      "priceRange": "LKR 4,000 – 5,000",
+      "priceRange": "LKR 1,000 – 2,000",
+      "description": "Get your store on the map—fast.",
+      "features": [
+        { "text": "Google Map Listing", "icon": "FaGoogle" },
+        { "text": "6 Pro Store Photos" },
+        { "text": "Business Bio & SEO Optimization" }
+      ],
+      "highlight": false,
+      "order": 0,
+      "category": "Online Presence"
+    },
+    {
+      "id": 1,
+      "title": "Starter Online Presence Pro",
+      "priceRange": "LKR 3,000 – 4,000",
       "description": "Get your store on the map—fast.",
       "features": [
         { "text": "GMB Setup & Verification", "icon": "FaGoogle" },
@@ -20,13 +34,13 @@
     {
       "id": 2,
       "title": "Social Media Accelerator",
-      "priceRange": "LKR 10,000 – 15,000",
+      "priceRange": "LKR 10,000 – 15,000",
       "description": "Supercharge your socials with pro‑level content.",
       "features": [
         { "text": "Custom Logo & Cover Design" },
-        { "text": "Facebook: 6 Posts/mo + 1 Ad Campaign", "icon": "FaFacebook" },
+        { "text": "Facebook: 6 Posts/mo", "icon": "FaFacebook" },
         { "text": "Instagram: 6 Posts/mo + 2 Reels", "icon": "FaInstagram" },
-        { "text": "TikTok: 6 Shorts/mo + 2 Live Q&As", "icon": "FaTiktok" },
+        { "text": "TikTok: 6 Shorts/mo", "icon": "FaTiktok" },
         { "text": "Engagement Boost Strategy & Hashtag Pack" }
       ],
       "highlight": true,
@@ -36,14 +50,12 @@
     {
       "id": 3,
       "title": "Channel‑By‑Channel Domination",
-      "priceRange": "LKR 18,000 – 25,000",
+      "priceRange": "LKR 18,000 – 25,000",
       "description": "Deep‑dive on every platform for max reach.",
       "features": [
-        { "text": "GMB: Full Optimization + Weekly Posts", "icon": "FaGoogle" },
-        { "text": "Facebook: 8 Posts/mo + 2 Ads Setup", "icon": "FaFacebook" },
+        { "text": "Facebook: 8 Posts/mo", "icon": "FaFacebook" },
         { "text": "Instagram: 8 Posts/mo + 4 Reels", "icon": "FaInstagram" },
-        { "text": "TikTok: 8 Shorts/mo + 4 Live Sessions", "icon": "FaTiktok" },
-        { "text": "Google Ads: Basic Setup & Management" },
+        { "text": "TikTok: 8 Shorts/mo + 2 Live Sessions", "icon": "FaTiktok" },
         { "text": "Monthly Analytics Report & Strategy Call" }
       ],
       "highlight": false,
@@ -53,10 +65,10 @@
     {
       "id": 4,
       "title": "Workflow Wizard",
-      "priceRange": "LKR 8,000 – 12,000",
+      "priceRange": "LKR 8,000 – 12,000",
       "description": "Automate repetitive tasks, save hours weekly.",
       "features": [
-        { "text": "Custom N8N Workflow", "icon": "FaCogs" },
+        { "text": "Custom N8N Workflow" },
         { "text": "Google Sheets + Gmail Automation" },
         { "text": "Lead Form to CRM Auto-Sync" },
         { "text": "WhatsApp Auto-Reply System" },
@@ -69,11 +81,11 @@
     {
       "id": 5,
       "title": "Client Flow Pro",
-      "priceRange": "LKR 15,000 – 20,000",
+      "priceRange": "LKR 15,000 – 20,000",
       "description": "Systemize your client onboarding & support.",
       "features": [
         { "text": "Notion/Google Sheets CRM Template" },
-        { "text": "Auto Invoice Generator via Make/N8N" },
+        { "text": "Auto Invoice Generator via N8N" },
         { "text": "Email + WhatsApp Workflow" },
         { "text": "Feedback & Review Collection Bot" }
       ],
@@ -84,7 +96,7 @@
     {
       "id": 6,
       "title": "24/7 Virtual Assistant Bot",
-      "priceRange": "LKR 20,000 – 30,000",
+      "priceRange": "LKR 20,000 – 30,000",
       "description": "AI bot that handles FAQs, leads, and more.",
       "features": [
         { "text": "Custom GPT Bot for Website/DMs" },
@@ -99,48 +111,45 @@
     {
       "id": 7,
       "title": "Launch‑Ready Website",
-      "priceRange": "LKR 10,000 – 20,000",
+      "priceRange": "LKR 15,000 – 20,000",
       "description": "Simple, clean, and fast — ready to go live.",
       "features": [
-        { "text": "React (Vite) Website – Up to 5 Pages" },
+        { "text": "React (Vite) Website" },
         { "text": "Mobile Responsive & SEO Ready" },
         { "text": "Contact Form + WhatsApp Button" },
-        { "text": "Hosting & Domain Setup Help" }
+        { "text": "Free Hosting & Domain For 1 Year" }
       ],
-      "highlight": false,
+      "highlight": true,
       "order": 7,
       "category": "Web Development"
     },
     {
-      "id": 8,
-      "title": "Ad Blaster 360°",
-      "priceRange": "LKR 7,000 – 15,000",
-      "description": "Get seen where it matters most.",
+      "id": 9,
+      "title": "Facebook & Instagram Ad Campaign",
+      "priceRange": "LKR 5,000 – 10,000",
+      "description": "Targeted ad campaigns for Facebook to increase brand visibility.",
       "features": [
-        { "text": "Google Ads Campaign Setup" },
-        { "text": "Facebook & Instagram Ad Setup" },
-        { "text": "1‑Week Ad Performance Monitoring" },
-        { "text": "Custom Ad Creatives (Copy + Design)" }
+        { "text": "Ad Campaign Setup & Management" },
+        { "text": "Custom Ad Creatives (Copy + Design)" },
+        { "text": "1‑Week Ad Performance Monitoring" }
       ],
       "highlight": false,
-      "order": 8,
+      "order": 9,
       "category": "Advertisement"
     },
     {
-      "id": 9,
-      "title": "Your Freedom Stack",
-      "priceRange": "LKR 25,000 – 40,000",
-      "description": "Full-stack setup to free your time & boost income.",
+      "id": 10,
+      "title": "Google Ad Campaign",
+      "priceRange": "LKR 7,000 – 15,000",
+      "description": "Get the attention you deserve with Google Ads.",
       "features": [
-        { "text": "Website + Social Media Setup" },
-        { "text": "Basic Automation System (N8N)" },
-        { "text": "Client Booking + Notification System" },
-        { "text": "Freelancer Profile Optimization Pack" },
-        { "text": "Strategy Call + Monthly Support" }
+        { "text": "Google Ads Campaign Setup & Management" },
+        { "text": "Custom Ad Creatives (Copy + Design)" },
+        { "text": "1‑Week Ad Performance Monitoring" }
       ],
-      "highlight": true,
-      "order": 9,
-      "category": "Freedom Bundle"
+      "highlight": false,
+      "order": 10,
+      "category": "Advertisement"
     }
   ]
 }

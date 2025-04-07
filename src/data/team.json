@@ -49,6 +49,29 @@
     "order": 1
   },
   {
+    "_id": "6797104691f7bb995721d176",
+    "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1744031711/Ishara_poczun.webp",
+    "member_name": "Ishara Madhuwanthi",
+    "member_position": "CHRO & Lead HR Strategist",
+    "member_mail": "Ishara@yaksen.com",
+    "member_socialmedia": [],
+    "member_about": "Ishara Madhuwanthi is the Chief Human Resources Officer at YAKSEN, bringing a wealth of experience in talent management, organizational development, and strategic HR leadership. With a deep passion for building effective teams, fostering employee engagement, and promoting a positive company culture, Ishara ensures that YAKSEN remains a thriving, innovative workplace.",
+    "member_experties": [
+      "Talent Acquisition & Recruitment Strategy",
+      "Employee Development & Retention",
+      "HR Analytics & Data-Driven Decision Making",
+      "Organizational Design & Development",
+      "Workplace Culture & Employee Engagement",
+      "Performance Management & Coaching",
+      "Leadership Development & Succession Planning",
+      "Strategic HR Planning & Workforce Optimization"
+    ],
+    "member_featured_projects": [],
+    "__v": 0,
+    "url_head": "ishara",
+    "order": 2
+  },
+  {
     "_id": "67a30e4e6b7511e1ef0d3458",
     "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739950572/Bewan_in8tsk.webp",
     "member_name": "Bewan Chandupa",
@@ -79,7 +102,7 @@
     "member_featured_projects": [],
     "__v": 0,
     "url_head": "bewan",
-    "order": 2
+    "order": 3
   },
   {
     "_id": "67a2dfa6b1ecd4f2770c65dc",
@@ -102,7 +125,7 @@
         "link": "https://www.linkedin.com/in/wmd-gimhana-46622b305/"
       }
     ],
-    "member_about": "Daham Gimhana is a tech innovator born in 2005, having a deep passion for Cybersecurity and AI-driven solutions. He is always on the lookout to bring about something big, indulging in intelligent system development to push the limits of technology. His vision is to blend creativity with bleeding-edge advancements and create a real impact in the space of AI and cybersecurity. ",
+    "member_about": "Daham Gimhana is a tech innovator born in 2005, having a deep passion for Cybersecurity and AI-driven solutions. He is always on the lookout to bring about something big, indulging in intelligent system development to push the limits of technology. His vision is to blend creativity with bleeding-edge advancements and create a real impact in the space of AI and cybersecurity.",
     "member_experties": [
       "Machine Learning (Specialized in Natural Language Processing)",
       "AI Chatbot Development",
@@ -115,6 +138,6 @@
     ],
     "__v": 0,
     "url_head": "daham",
-    "order": 3
+    "order": 4
   }
 ]

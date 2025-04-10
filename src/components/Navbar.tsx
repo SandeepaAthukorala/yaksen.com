@@ -94,12 +94,6 @@ export default function Navbar() {
               About
             </button>
             <button
-              onClick={() => handleNavigation("services")}
-              className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              Services
-            </button>
-            <button
               onClick={() => handleNavigation("projects")}
               className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
             >

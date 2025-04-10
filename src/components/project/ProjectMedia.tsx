@@ -68,8 +68,7 @@ export default function ProjectMedia({ videos, gallery, webLinks }: ProjectMedia
                       allowFullScreen
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center">
-                    <span className="text-white text-lg">Click to visit site</span>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 flex justify-center items-center">
                   </div>
                 </div>
               ))}

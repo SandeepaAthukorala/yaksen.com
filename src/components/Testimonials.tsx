@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import InfiniteTestimonials from "./testimonials/InfiniteTestimonials";
-import { getTestimonials } from "../apiCalls/ApiCalls";
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);

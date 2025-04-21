@@ -10,13 +10,6 @@ import TermsConditions from "./pages/policies/TermsConditions";
 import RefundPolicy from "./pages/policies/RefundPolicy";
 import HelpCenter from "./pages/support/HelpCenter";
 import FAQ from "./pages/support/FAQ";
-import AdminServices from "./admin/dashboard/pages/AdminServices";
-import AdminProjects from "./admin/dashboard/pages/AdminProjects";
-import AdminTestimonials from "./admin/dashboard/pages/AdminTestimonials";
-import AdminMembers from "./admin/dashboard/pages/AdminMembers";
-import AdminUsers from "./admin/dashboard/pages/AdminUsers";
-import Login from "./admin/auth/login/Login";
-import Register from "./admin/auth/register/Register";
 import ProtectedRoute from "./components/protected/ProtectedRoute";
 
 import NotFound from "./pages/NotFound";
@@ -50,15 +43,6 @@ export default function App() {
           <Route path="/inhuman-spotify" element={<InhumanSpotifyRedirect />} /> {/* Redirect path */}
           <Route path="/inhuman-youtube-music" element={<InhumanYoutubeRedirect />} /> {/* Redirect path */}
           <Route path="*" element={<NotFound />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/admin/services" element={<AdminServices />} />
-            <Route path="/admin/projects" element={<AdminProjects />} />
-            <Route path="/admin/testimonials" element={<AdminTestimonials />} />
-            <Route path="/admin/members" element={<AdminMembers />} />
-            <Route path="/admin/users" element={<AdminUsers />} />
-          </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
       <ChatBot />

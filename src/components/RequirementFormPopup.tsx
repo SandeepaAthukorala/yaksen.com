@@ -29,6 +29,7 @@ import React, { useState, FormEvent } from "react";
         email: "",
         company: "",
         requirements: "",
+        action: "package_inquirie"
       });
       const [loading, setLoading] = useState(false);
 
@@ -44,62 +45,36 @@ import React, { useState, FormEvent } from "react";
         if (!packageData) return;
         setLoading(true);
 
-        const subject = `Requirement Inquiry for Package: ${packageData.title}`;
-        const body = `
-          Package: ${packageData.title} (${packageData.priceRange})
-          Name: ${formData.name}
-          Email: ${formData.email}
-          Company: ${formData.company}
-          Requirements:
-          ${formData.requirements}
-        `;
-
-        // Simulate sending data (replace with actual API call or email sending logic)
-        console.log("Form Data Submitted:", { ...formData, package: packageData.title });
-        console.log("Email Subject:", subject);
-        console.log("Email Body:", body);
-
-        // Example using formsubmit.co (replace with your actual endpoint)
-        const form = e.target as HTMLFormElement;
-        const hiddenFormData = new FormData(form); // Use existing hidden fields if any
-        hiddenFormData.append("name", formData.name);
-        hiddenFormData.append("email", formData.email);
-        hiddenFormData.append("company", formData.company);
-        hiddenFormData.append("requirements", formData.requirements);
-        hiddenFormData.append("_subject", subject); // Custom subject for formsubmit.co
-        hiddenFormData.append("package_title", packageData.title);
-        hiddenFormData.append("package_price", packageData.priceRange);
-
-
         try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: hiddenFormData,
-            headers: {
-              'Accept': 'application/json' // Important for formsubmit.co AJAX
+          const response = await fetch(
+            "https://n8n.srv788705.hstgr.cloud/webhook/59482ded-66a9-4f1c-9722-1f06eaa10f6b",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                ...formData,
+                package: packageData.title,
+                packagePrice: packageData.priceRange,
+              }),
             }
-          });
+          );
 
           if (response.ok) {
             toast.success("Your requirement inquiry was sent successfully!");
-            setFormData({ name: "", email: "", company: "", requirements: "" }); // Reset form
-            onClose(); // Close popup
+            setFormData({ name: "", email: "", company: "", requirements: "", action: "package_inquirie" });
+            onClose();
           } else {
-             // Even on error, show success for formsubmit.co as it redirects
-             toast.success("Your requirement inquiry was sent successfully!");
-             setFormData({ name: "", email: "", company: "", requirements: "" });
-             onClose();
+            toast.error("Failed to send requirement inquiry. Please try again.");
           }
         } catch (error) {
-           // Even on catch, show success for formsubmit.co
-           toast.success("Your requirement inquiry was sent successfully!");
-           setFormData({ name: "", email: "", company: "", requirements: "" });
-           onClose();
+          toast.error("An error occurred while sending. Please try again.");
+          console.error("Form submission error:", error);
         } finally {
           setLoading(false);
         }
       };
-
 
       if (!isOpen || !packageData) return null;
 
@@ -123,12 +98,7 @@ import React, { useState, FormEvent } from "react";
                 ({packageData.priceRange}) - Please fill out your details below.
               </p>
 
-              <form onSubmit={handleSubmit} action="https://formsubmit.co/yaksen.contact@gmail.com" method="POST" className="space-y-4">
-                 {/* Hidden fields for formsubmit.co */}
-                 <input type="hidden" name="_captcha" value="false" />
-                 {/* Optional: Redirect URL after submission */}
-                 {/* <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html" /> */}
-
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label
                     htmlFor="name"

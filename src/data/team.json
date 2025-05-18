@@ -72,39 +72,6 @@
     "order": 2
   },
   {
-    "_id": "67a30e4e6b7511e1ef0d3458",
-    "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739950572/Bewan_in8tsk.webp",
-    "member_name": "Bewan Chandupa",
-    "member_position": "CMO & AI Creative Lead",
-    "member_mail": "Bewan@yaksen.com",
-    "member_socialmedia": [
-      {
-        "platform": "facebook",
-        "link": "https://web.facebook.com/bevan.thilakarathna",
-        "_id": "67a30e4e6b7511e1ef0d3459"
-      },
-      {
-        "platform": "linkedin",
-        "link": "https://www.linkedin.com/in/bewan-thilakarathne-b66131340/"
-      }
-    ],
-    "member_about": "Bewan Chandupa is the Co-Founder & AI Creative Lead at YAKSEN. His vision for this company is to make it the leading AI solution agency on the island. With a passion for graphic design, video editing, and creativity using AI, he makes ideas come into reality with the perfect combination of art and technology. He likes to play cricket, do some gaming, watch films and TV series, create YouTube content, and always try to do something new to inspire anyone in his free time.",
-    "member_experties": [
-      "AI-Driven Graphic Design & Visual Creativity",
-      "Presentation Design & Branding",
-      "Product Photography Editing & Enhancement",
-      "AI-Assisted Video Editing & Motion Graphics",
-      "Content Creation for Digital Platforms",
-      "AI-Powered Art & Generative Design",
-      "YouTube Content Strategy & Production",
-      "Creative Direction & Aesthetic Development"
-    ],
-    "member_featured_projects": [],
-    "__v": 0,
-    "url_head": "bewan",
-    "order": 3
-  },
-  {
     "_id": "67a2dfa6b1ecd4f2770c65dc",
     "member_image_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1740117790/daham_hutx9n.webp",
     "member_name": "Daham Gimhana",

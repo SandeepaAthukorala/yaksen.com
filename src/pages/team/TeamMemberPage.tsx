@@ -294,7 +294,7 @@ export default function TeamMemberPage() {
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Featured Projects
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
                       {featuredProjects.map((project, index) => (
                         <div
                           key={index}

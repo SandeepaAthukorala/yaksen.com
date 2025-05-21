@@ -25,16 +25,15 @@ export default function TeamMember({
 
   return (
     <Link to={`/team/${id}`} className="block text-center group">
-      <div className="relative group">
-        <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+        <div className="w-full aspect-square mb-4 rounded-lg overflow-hidden">
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
-      </div>
-      <div className="mt-4">
+        <div className="mt-4">
         <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary">
           {name}
         </h4>
@@ -47,6 +46,8 @@ export default function TeamMember({
           {email}
         </button>
       </div>
+      </div>
+
     </Link>
   );
 }

@@ -275,11 +275,11 @@ export default function TeamMemberPage() {
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Expertise
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full justify-items-center">
                       {member.member_experties.map((item, index) => (
                         <div
                           key={index}
-                          className="flex items-center space-x-2 text-gray-600 dark:text-gray-300"
+                          className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 justify-center"
                         >
                           <Brain className="h-5 w-5 text-primary" />
                           <span>{item}</span>
@@ -294,7 +294,7 @@ export default function TeamMemberPage() {
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Featured Projects
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
                       {featuredProjects.map((project, index) => (
                         <div
                           key={index}
@@ -304,7 +304,7 @@ export default function TeamMemberPage() {
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                           }}
-                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 min-h-[150px] flex flex-col justify-end" // Added min-height and flex for content positioning
+                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 min-h-[150px] flex flex-col justify-end"
                         >
                           {/* Overlay */}
                           <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>

@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Services from "../components/Services"; // Renders OurServices and MeetYakira
-import Packages from "../components/Packages"; // Import the new Packages component
+
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
 import Testimonials from "../components/Testimonials";
@@ -15,8 +15,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <About />
-      <Services />
-      <Packages /> {/* Add the Packages section here */}
+      <Services /> {/* Services section */}
       <Technologies />
       <Projects />
       <Testimonials />

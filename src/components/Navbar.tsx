@@ -48,12 +48,7 @@ export default function Navbar() {
             >
               Projects
             </button>
-            <button
-              onClick={() => handleNavigation("packages")}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              Packages
-            </button>
+
             {/* <button
               onClick={() => handleNavigation("testimonials")}
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
@@ -99,12 +94,7 @@ export default function Navbar() {
             >
               Projects
             </button>
-            <button
-              onClick={() => handleNavigation("packages")}
-              className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              Packages
-            </button>
+
             <button
               onClick={() => handleNavigation("yakira")}
               className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"

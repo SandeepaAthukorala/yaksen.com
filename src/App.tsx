@@ -4,6 +4,9 @@ import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/blog/BlogPage";
 import ProjectPage from "./pages/ProjectPage";
 import ServicePage from "./pages/ServicePage";
+import WebDevelopmentPage from "./pages/services/WebDevelopmentPage";
+import SoftwareSolutionsPage from "./pages/services/SoftwareSolutionsPage";
+import AutomationPage from "./pages/services/AutomationPage";
 import TeamMemberPage from "./pages/team/TeamMemberPage";
 import PrivacyPolicy from "./pages/policies/PrivacyPolicy";
 import TermsConditions from "./pages/policies/TermsConditions";
@@ -33,6 +36,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route path="/services/web-development" element={<WebDevelopmentPage />} />
+          <Route path="/services/custom-software" element={<SoftwareSolutionsPage />} />
+          <Route path="/services/process-optimization" element={<AutomationPage />} />
           <Route path="/services/:id" element={<ServicePage />} />
           <Route path="/team/:id" element={<TeamMemberPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

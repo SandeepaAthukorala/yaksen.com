@@ -39,7 +39,30 @@ import React, { useEffect, useState } from "react";
 
       useEffect(() => {
         // Load the service data from the local JSON file
-        const service = (servicesData as ServiceData[]).find((s) => s._id === id);
+        let service;
+        
+        // Handle special URL paths for the new services
+        if (id === 'web-development' || id === 'custom-software' || id === 'process-optimization') {
+          // Map the URL path to an appropriate service from the data
+          // For now, we'll map to existing services based on relevance
+          const serviceMap = {
+            'web-development': (servicesData as ServiceData[]).find(s => 
+              s.service_title.toLowerCase().includes('web') || 
+              s.service_title.toLowerCase().includes('development')),
+            'custom-software': (servicesData as ServiceData[]).find(s => 
+              s.service_title.toLowerCase().includes('software') || 
+              s.service_title.toLowerCase().includes('solution')),
+            'process-optimization': (servicesData as ServiceData[]).find(s => 
+              s.service_title.toLowerCase().includes('automation') || 
+              s.service_title.toLowerCase().includes('optimization'))
+          };
+          
+          service = serviceMap[id as keyof typeof serviceMap];
+        } else {
+          // Regular ID-based lookup
+          service = (servicesData as ServiceData[]).find((s) => s._id === id);
+        }
+        
         if (service) {
           // Sort sub-services by order
           const sortedSubServices = [...service.sub_services].sort((a, b) => a.order - b.order);

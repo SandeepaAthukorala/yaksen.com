@@ -13,7 +13,11 @@ export default function ServiceTools({ tools }: ServiceToolsProps) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tools.map((tool, index) => (
-            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg transform transition-all duration-300 hover:scale-105">
+            <div 
+              key={index} 
+              className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg transform transition-all duration-300 hover:scale-105 cursor-pointer"
+              onClick={() => window.open(tool.techStack?.[0] ? `https://www.google.com/search?q=${tool.name}+${tool.techStack[0]}` : `https://www.google.com/search?q=${tool.name}+technology`, '_blank')}
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <tool.icon className="h-6 w-6 text-primary" />

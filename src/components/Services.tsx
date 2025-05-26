@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Globe, Layers, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Services() {
@@ -8,19 +8,22 @@ export default function Services() {
       id: "web-development",
       title: "Smart Web Development",
       description: "Modern, responsive websites and web applications built with the latest technologies to enhance your online presence and user experience.",
-      link: "/services/web-development"
+      link: "/services/web-development",
+      icon: <Globe className="h-10 w-10 text-primary mb-4" />
     },
     {
       id: "custom-software",
       title: "Custom Software Solutions for Businesses",
       description: "Tailored software solutions designed to address your specific business needs, streamline operations, and drive growth.",
-      link: "/services/custom-software"
+      link: "/services/custom-software",
+      icon: <Layers className="h-10 w-10 text-primary mb-4" />
     },
     {
       id: "process-optimization",
       title: "Process Optimization & Automation",
       description: "Identify inefficiencies in your workflows and implement automation solutions to increase productivity and reduce operational costs.",
-      link: "/services/process-optimization"
+      link: "/services/process-optimization",
+      icon: <Settings className="h-10 w-10 text-primary mb-4" />
     }
   ];
 
@@ -38,25 +41,24 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div 
+            <Link 
               key={service.id} 
-              className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1"
+              to={service.link}
+              className="block bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1"
             >
               <div className="p-8 h-full flex flex-col">
+                {service.icon}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                   {service.description}
                 </p>
-                <Link 
-                  to={service.link} 
-                  className="inline-flex items-center text-primary hover:text-primary-dark font-medium"
-                >
+                <div className="inline-flex items-center text-primary hover:text-primary-dark font-medium">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

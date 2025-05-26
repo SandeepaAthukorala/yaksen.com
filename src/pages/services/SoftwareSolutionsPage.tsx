@@ -89,7 +89,8 @@ export default function SoftwareSolutionsPage() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1"
+                onClick={() => scrollToSection('contact')}
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1 cursor-pointer"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
@@ -158,7 +159,8 @@ export default function SoftwareSolutionsPage() {
             ].map((plan, index) => (
               <div
                 key={index}
-                className={`bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${plan.highlighted ? 'ring-2 ring-primary transform scale-105' : ''}`}
+                onClick={() => scrollToSection('contact')}
+                className={`bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer ${plan.highlighted ? 'ring-2 ring-primary transform scale-105' : ''}`}
               >
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">

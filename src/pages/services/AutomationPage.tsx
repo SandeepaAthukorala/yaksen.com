@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer/Footer";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import { scrollToSection } from "../../utils/scroll";
 import { ArrowRight, Zap, Clock, Workflow, Bot, LineChart, Cog } from "lucide-react";
 
 export default function AutomationPage() {
@@ -196,7 +197,10 @@ export default function AutomationPage() {
             Let's discuss how our automation solutions can help you increase efficiency and reduce costs.
           </p>
           <Link
-            to="/contact"
+            to="/"
+            onClick={() => {
+              setTimeout(() => scrollToSection('contact'), 100);
+            }}
             className="inline-flex items-center py-3 px-6 bg-white text-primary font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300"
           >
             Contact Us <ArrowRight className="ml-2 h-5 w-5" />

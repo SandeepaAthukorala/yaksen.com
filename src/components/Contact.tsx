@@ -26,16 +26,17 @@ import { ChangeEvent, FormEvent, useState } from "react";
         setLoading(true);
 
         try {
-          const response = await fetch(
-            "https://n8n.srv788705.hstgr.cloud/webhook/59482ded-66a9-4f1c-9722-1f06eaa10f6b",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            }
-          );
+          const response = await fetch("https://formspree.io/f/xldbyqke", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              message: formData.message
+            }),
+          });
 
           if (response.ok) {
             toast.success("Your message was sent successfully!");

@@ -4,7 +4,7 @@ import BotComponent from "./BotComponent";
 
 const ChatBot: React.FC = () => {
   const [botShow, setBotShow] = useState(false);
-  const [isChatEnabled, setIsChatEnabled] = useState(true); // Set this true to show chat bot again
+  const [isChatEnabled, setIsChatEnabled] = useState(false); // Toggle via developer tools to enable
 
   const handleChatButton = () => {
     setBotShow(!botShow);

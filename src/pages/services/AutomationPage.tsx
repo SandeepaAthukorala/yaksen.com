@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import PackageInquiryForm from "../../components/PackageInquiryForm";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer/Footer";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { scrollToSection } from "../../utils/scroll";
 import { ArrowRight, Zap, Clock, Workflow, Bot, LineChart, Cog } from "lucide-react";
+import RequirementFormPopup from "../../components/RequirementFormPopup";
 
 export default function AutomationPage() {
   useScrollToTop();
+  
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState(null);
+
+  const handleOpenPopup = (packageData) => {
+    setSelectedPackage(packageData);
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setSelectedPackage(null);
+  };
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -160,7 +175,14 @@ export default function AutomationPage() {
               <div
                 key={index}
                 className={`bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${plan.highlighted ? 'ring-2 ring-primary transform scale-105' : ''} cursor-pointer`}
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleOpenPopup({
+                  id: index,
+                  title: plan.title,
+                  priceRange: plan.price,
+                  description: plan.description,
+                  features: plan.features.map(feature => ({ text: feature })),
+                  highlight: plan.highlighted
+                })}
               >
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -210,7 +232,28 @@ export default function AutomationPage() {
         </div>
       </section>
 
+      {/* Package Inquiry Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Let's discuss your automation needs and streamline your business processes.
+            </p>
+          </div>
+          <PackageInquiryForm serviceType="Automation Solutions" />
+        </div>
+      </section>
+
       <Footer />
+      
+      <RequirementFormPopup
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        packageData={selectedPackage}
+      />
     </div>
   );
 }

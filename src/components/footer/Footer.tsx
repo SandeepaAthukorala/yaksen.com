@@ -1,5 +1,7 @@
+import React from "react";
 import SocialLinks from "../SocialLinks";
 import FooterLinks from "./FooterLinks";
+
 import { useNavigate } from "react-router-dom";
 const LogoImg = "https://res.cloudinary.com/das8wrfd1/image/upload/v1739760282/logo_owiqet.png";
 

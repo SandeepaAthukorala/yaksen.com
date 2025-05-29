@@ -7,6 +7,8 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { scrollToSection } from "../../utils/scroll";
 import { ArrowRight, Zap, Clock, Workflow, Bot, LineChart, Cog } from "lucide-react";
 import RequirementFormPopup from "../../components/RequirementFormPopup";
+import MediaGallery from "../../components/services/MediaGallery";
+import { automationGalleryData } from "../../data/galleryData";
 
 export default function AutomationPage() {
   useScrollToTop();
@@ -246,6 +248,18 @@ export default function AutomationPage() {
           <PackageInquiryForm serviceType="Automation Solutions" />
         </div>
       </section>
+
+      {/* Gallery Section */}
+      {automationGalleryData.length > 0 && (
+        <section className="py-16 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+              Our Work
+            </h2>
+            <MediaGallery mediaData={automationGalleryData} />
+          </div>
+        </section>
+      )}
 
       <Footer />
       

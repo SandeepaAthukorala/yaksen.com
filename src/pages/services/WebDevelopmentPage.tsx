@@ -7,6 +7,8 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { scrollToSection } from "../../utils/scroll";
 import { ArrowRight, Code, Zap, Globe, Smartphone, Palette, Gauge } from "lucide-react";
 import RequirementFormPopup from "../../components/RequirementFormPopup";
+import MediaGallery from "../../components/services/MediaGallery";
+import { webDevelopmentGalleryData } from "../../data/galleryData";
 
 export default function WebDevelopmentPage() {
   useScrollToTop();
@@ -244,6 +246,16 @@ export default function WebDevelopmentPage() {
             </p>
           </div>
           <PackageInquiryForm serviceType="Web Development" />
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            Our Work
+          </h2>
+          <MediaGallery mediaData={webDevelopmentGalleryData} />
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Globe, Layers, Settings } from "lucide-react";
+import { ArrowRight, Globe, Layers, Settings, Sparkle, Paintbrush, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Services() {
@@ -24,6 +24,27 @@ export default function Services() {
       description: "Identify inefficiencies in your workflows and implement automation solutions to increase productivity and reduce operational costs.",
       link: "/services/process-optimization",
       icon: <Settings className="h-10 w-10 text-primary mb-4" />
+    },
+    {
+      id: "ai-personal-branding",
+      title: "AI-Powered Personal Branding",
+      description: "Level-Up Your Online Persona with a Smart AI-Powered Brand",
+      link: "/services/ai-personal-branding",
+      icon: <Sparkle className="h-10 w-10 text-primary mb-4" />
+    },
+    {
+      id: "smart-visual-design",
+      title: "Smart Visual Design Studio",
+      description: "High-Impact Graphics, Powered by Your Ideas + AI Precision",
+      link: "/services/smart-visual-design",
+      icon: <Paintbrush className="h-10 w-10 text-primary mb-4" />
+    },
+    {
+      id: "workflow-wizard",
+      title: "Workflow Wizard: Scan & Automate",
+      description: "From Paper to Productivity — Automate Tedious Docs with AI",
+      link: "/services/workflow-wizard",
+      icon: <Workflow className="h-10 w-10 text-primary mb-4" />
     }
   ];
 

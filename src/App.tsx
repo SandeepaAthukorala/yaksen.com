@@ -7,6 +7,9 @@ import ServicePage from "./pages/ServicePage";
 import WebDevelopmentPage from "./pages/services/WebDevelopmentPage";
 import SoftwareSolutionsPage from "./pages/services/SoftwareSolutionsPage";
 import AutomationPage from "./pages/services/AutomationPage";
+import AIPersonalBrandingPage from "./pages/services/AIPersonalBrandingPage";
+import SmartVisualDesignPage from "./pages/services/SmartVisualDesignPage";
+import WorkflowWizardPage from "./pages/services/WorkflowWizardPage";
 import TeamMemberPage from "./pages/team/TeamMemberPage";
 import PrivacyPolicy from "./pages/policies/PrivacyPolicy";
 import TermsConditions from "./pages/policies/TermsConditions";
@@ -39,6 +42,9 @@ export default function App() {
           <Route path="/services/web-development" element={<WebDevelopmentPage />} />
           <Route path="/services/custom-software" element={<SoftwareSolutionsPage />} />
           <Route path="/services/process-optimization" element={<AutomationPage />} />
+          <Route path="/services/ai-personal-branding" element={<AIPersonalBrandingPage />} />
+          <Route path="/services/smart-visual-design" element={<SmartVisualDesignPage />} />
+          <Route path="/services/workflow-wizard" element={<WorkflowWizardPage />} />
           <Route path="/services/:id" element={<ServicePage />} />
           <Route path="/team/:id" element={<TeamMemberPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

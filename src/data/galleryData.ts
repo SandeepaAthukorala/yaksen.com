@@ -120,7 +120,6 @@ export const smartVisualDesignGalleryData = [
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500350/blue_lotus_powder_gxryrd.png",
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500349/blue_lotus_slices_wqfxxv.png",
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500349/curry_leaves_powder_x94exa.png",
-          "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500346/cover_art_sszyyr.jpg"
       ]
   }
 ];

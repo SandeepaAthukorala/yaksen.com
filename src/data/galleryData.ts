@@ -192,8 +192,6 @@ export const smartVisualDesignGalleryData = [
         "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500320/freepik__yakira-in-a-burnt-sienna-oversized-shirt-with-fold__15742_jhccky.webp",
         "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500320/freepik__yakira-a-charming-sri-lankan-girl-fully-visible-we__15895_lneqb2.webp",
         "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500320/freepik__yakira-in-a-khaki-shirt-with-texture-detail-tucked__15761_tgak3j.webp",
-        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500320/freepik__yakira-a-hispanic-woman-in-a-relaxed-cream-silk-sh__15677_ghkpiy.webp",
-        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500319/freepik__yakira-a-caucasian-woman-in-a-relaxed-cream-cotton__15679_vurslp.webp",
         // Add more AI fashion images here (e.g., from other models/styles)
         ]
     },

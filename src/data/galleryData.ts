@@ -97,7 +97,8 @@ export const smartVisualDesignGalleryData = [
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500342/__10_rmwgmp.webp",
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500342/__1_altee3.webp",
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500344/__17_ewmyxp.webp",
-      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500344/__2_q82dzo.webp"
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500344/__2_q82dzo.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748704105/0055_1_a-close-up-of-gooey-chocolate-brownies-w_2DKhP6WwTv60w-Vh_l2jct5.webp "
       ]
       
 
@@ -187,7 +188,8 @@ export const aiPersonalBrandingGalleryData = [
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500361/0014_1_a_romantic_image_of_a_handwritten_note_t_68y9fKyJSOavhhOH_cbirgm.webp",
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500361/0017_4_a_minimalist_illustration_of_a_calendar_qcOSFmFbTZiJyOe2K_jygqjt.webp",
           "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500360/0013_2_a_festive_birthday_greeting_with_the_tex_YlRZ29xSRZGyCB7x_kwaezi.webp",
-          "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500359/0004_1_a_photo_of_a_beautiful_setting_with_a_wh_1TCTOUlRQYGeGtRQ_dkbyhp.webp"
+          "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500359/0004_1_a_photo_of_a_beautiful_setting_with_a_wh_1TCTOUlRQYGeGtRQ_dkbyhp.webp",
+          "https://res.cloudinary.com/dpc7doi10/image/upload/v1748704159/0014_4_a-romantic-illustration-with-the-text-fo_tn4pT1jQS0e-iTPKrrBINg_xU4kDrPdThu4kbnJG-YL2A_yncpgn.webp"
       ]
   }
 ];

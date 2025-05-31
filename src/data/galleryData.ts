@@ -98,7 +98,7 @@ export const smartVisualDesignGalleryData = [
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500342/__1_altee3.webp",
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500344/__17_ewmyxp.webp",
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500344/__2_q82dzo.webp",
-      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748704105/0055_1_a-close-up-of-gooey-chocolate-brownies-w_2DKhP6WwTv60w-Vh_l2jct5.webp "
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748704105/0055_1_a-close-up-of-gooey-chocolate-brownies-w_2DKhP6WwTv60w-Vh_l2jct5.webp"
       ]
       
 

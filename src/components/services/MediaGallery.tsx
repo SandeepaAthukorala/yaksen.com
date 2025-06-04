@@ -240,7 +240,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ mediaData }) => {
                   <div className="p-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {/* Randomize items order within the category and limit to show_limit */}
-                      {[...category.items]
+                      {[...new Set(category.items)]
                         .sort(() => Math.random() - 0.5)
                         .slice(0, category.show_limit || 6)
                         .map((item, itemIndex) => 
@@ -257,7 +257,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ mediaData }) => {
             // Single category, no title needed
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Randomize items order and limit to show_limit */}
-              {[...filteredMediaData[0].items]
+              {[...new Set(filteredMediaData[0].items)]
                 .sort(() => Math.random() - 0.5)
                 .slice(0, filteredMediaData[0].show_limit || 6)
                 .map((item, itemIndex) => 

@@ -158,7 +158,7 @@ export const aiPersonalBrandingGalleryData = [
   {
       // AI-Generated Fashion images for Personal Branding (Yakira)
       category: "Yakira AI Fashion",
-      show_limit: 6,
+      show_limit: 9,
       items: [
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500331/freepik__yakira-woman-in-a-pastel-midi-skirt-with-soft-plea__15875_uogsmb.webp",
       "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500330/freepik__yakira-wearing-olive-green-relaxed-shorts-with-sid__15941_r2megn.webp",

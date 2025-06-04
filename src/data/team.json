@@ -6,45 +6,23 @@
     "member_position": "CEO & AI Visionary",
     "member_mail": "Sandeepa@yaksen.com",
     "member_socialmedia": [
-      {
-        "platform": "github",
-        "link": "https://github.com/SandeepaAthukorala",
-        "_id": "6797104691f7bb995721d173"
-      },
-      {
-        "platform": "facebook",
-        "link": "https://web.facebook.com/Sanda.TheOG/",
-        "_id": "6797104691f7bb995721d174"
-      },
-      {
-        "platform": "linkedin",
-        "link": "https://www.linkedin.com/in/sandeepaathukorala/",
-        "_id": "6797104691f7bb995721d175"
-      }
+      { "platform": "github", "link": "https://github.com/SandeepaAthukorala", "_id": "6797104691f7bb995721d173" },
+      { "platform": "facebook", "link": "https://web.facebook.com/Sanda.TheOG/", "_id": "6797104691f7bb995721d174" },
+      { "platform": "linkedin", "link": "https://www.linkedin.com/in/sandeepaathukorala/", "_id": "6797104691f7bb995721d175" }
     ],
-    "member_about": "I am Sandeepa Dilshan Athukorala, Co-Founder & AI Visionary at YAKSEN, born in the year 2005. I am focused on making YAKSEN the leading AI solution agency on the island. Passionate about AI research, creating music, and outdoor adventures, driven by innovation and impactful projects.",
+    "member_about": "I’m Sandeepa, co-founder of YAKSEN, born in 2005. I’m driven to grow YAKSEN into the top AI agency in Sri Lanka by blending creativity and tech. Outside work, I’m into AI research, making music, and getting outdoors to recharge. My goal is to build AI tools that actually help people and make life easier.",
     "member_experties": [
-      "AI-Driven Music Composition & Mixing",
-      "AI-Assisted Research & Data Analysis",
-      "Development of AI-Integrated Tools & Solutions",
       "AI-Powered Content Creation",
-      "Digital Marketing Strategy & Execution",
-      "Brand Digitalization & Transformation",
-      "AI in Automation & Process Optimization",
-      "AI Ethics & Responsible Innovation"
-    ],
-    "member_featured_projects": [
-      "67a3024a85b1dfa3d3bbae2b",
-      "67b5e1ba791428aa82505473",
-      "67d2a1f549f0f413673f85ec"
+      "Automation & Workflow Optimization",
+      "AI Music Composition",
+      "Digital Brand Strategy",
+      "AI Ethics & Responsible Innovation",
+      "Product Development with AI"
     ],
     "__v": 0,
     "url_head": "sandeepa",
     "member_freelance_sites": [
-      {
-        "platform": "fiverr",
-        "link": "https://www.fiverr.com/users/dilsana"
-      }
+      { "platform": "fiverr", "link": "https://www.fiverr.com/users/dilsana" }
     ],
     "order": 1
   },
@@ -55,18 +33,15 @@
     "member_position": "CHRO & Lead HR Strategist",
     "member_mail": "Ishara@yaksen.com",
     "member_socialmedia": [],
-    "member_about": "Ishara Madhuwanthi is the Chief Human Resources Officer at YAKSEN, bringing a wealth of experience in talent management, organizational development, and strategic HR leadership. With a deep passion for building effective teams, fostering employee engagement, and promoting a positive company culture, Ishara ensures that YAKSEN remains a thriving, innovative workplace.",
+    "member_about": "Ishara leads our people strategy, making sure the team vibes well and stays productive. With experience in talent management and team development, she builds a culture where innovation and collaboration thrive. Her passion is helping people grow, and keeping YAKSEN a place where everyone feels valued and motivated.",
     "member_experties": [
-      "Talent Acquisition & Recruitment Strategy",
-      "Employee Development & Retention",
-      "HR Analytics & Data-Driven Decision Making",
-      "Organizational Design & Development",
-      "Workplace Culture & Employee Engagement",
-      "Performance Management & Coaching",
-      "Leadership Development & Succession Planning",
-      "Strategic HR Planning & Workforce Optimization"
+      "Talent Acquisition & Recruitment",
+      "Employee Engagement",
+      "Performance Management",
+      "Organizational Development",
+      "Leadership Coaching",
+      "Workforce Planning"
     ],
-    "member_featured_projects": [],
     "__v": 0,
     "url_head": "ishara",
     "order": 2
@@ -78,27 +53,18 @@
     "member_position": "CIO & Lead AI Engineer",
     "member_mail": "Daham@yaksen.com",
     "member_socialmedia": [
-      {
-        "platform": "github",
-        "link": "https://github.com/wmdgimhana",
-        "_id": "67a2dfa6b1ecd4f2770c65dd"
-      },
-      {
-        "platform": "facebook",
-        "link": "https://www.facebook.com/daham.gimhana.5"
-      },
-      {
-        "platform": "linkedin",
-        "link": "https://www.linkedin.com/in/wmd-gimhana-46622b305/"
-      }
+      { "platform": "github", "link": "https://github.com/wmdgimhana", "_id": "67a2dfa6b1ecd4f2770c65dd" },
+      { "platform": "facebook", "link": "https://www.facebook.com/daham.gimhana.5" },
+      { "platform": "linkedin", "link": "https://www.linkedin.com/in/wmd-gimhana-46622b305/" }
     ],
-    "member_about": "Daham Gimhana is a tech innovator born in 2005, having a deep passion for Cybersecurity and AI-driven solutions. He is always on the lookout to bring about something big, indulging in intelligent system development to push the limits of technology. His vision is to blend creativity with bleeding-edge advancements and create a real impact in the space of AI and cybersecurity.",
+    "member_about": "Daham is the tech brain behind YAKSEN’s AI and cybersecurity projects. Born in 2005, he’s passionate about pushing tech boundaries with AI-driven systems, specializing in NLP and security. Daham is always working on smarter, safer tech that makes a real difference.",
     "member_experties": [
-      "Machine Learning (Specialized in Natural Language Processing)",
+      "Natural Language Processing (NLP)",
       "AI Chatbot Development",
-      "Retrieval-Augmented Generation (RAG) Application Development",
-      "Penetration Testing",
-      "Web Development (MERN Stack)"
+      "Retrieval-Augmented Generation (RAG)",
+      "Cybersecurity & Pen Testing",
+      "MERN Stack Web Development",
+      "AI System Integration"
     ],
     "member_featured_projects": [
       "67b58ee34c17adf6abc7be98"

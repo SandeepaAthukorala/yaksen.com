@@ -38,62 +38,103 @@
     },
     "__v": 0,
     "order": 1
-  },
-  {
-    "_id": "67b58ee34c17adf6abc7be98",
-    "project_title": "GenAI Story Writer",
-    "project_sub_title": "",
-    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739951673/Screenshot_148_kfaxcg.webp",
-    "project_category_main": "AI-Driven Content Creation",
-    "project_category_sub": [],
-    "project_links": [
-      {
-        "platform": "web",
-        "url": "https://astro-ai-af73a.web.app/"
-      }
-    ],
-    "project_desc": "GenAI Story Writer is an advanced AI tool that generates creative and unique stories based on your input. Powered by LangChain, FastAPI, and Groq API, it offers seamless story creation with customizable elements like characters, genre, tone, and more. Its sleek frontend, built with React, Tailwind CSS, and Mantine UI, provides a smooth user experience.",
-    "project_keyfeatures": [
-      "Custom Story Generation",
-      "AI-Powered Writing",
-      "Fast & Efficient Backend",
-      "Modern UI"
-    ],
-    "project_showcase": {
-      "video_link": [],
-      "image_links": []
-    },
-    "__v": 0,
-    "order": 2
-  },
-  {
-    "_id": "67b5e1ba791428aa82505473",
-    "project_title": "Blush Bites",
-    "project_sub_title": "Taste the Joy in Every Bite!",
-    "project_cover_img_link": "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972830/Web_Art_hzi8fw.jpg",
-    "project_category_main": "AI-Driven Content Creation",
-    "project_category_sub": [],
+  },{
+    "_id": "proj_yakira_ai_model_002",
+    "project_title": "Yakira",
+    "project_sub_title": "Sri Lanka’s First AI-Powered Fashion Influencer",
+    "project_cover_img_link": "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500331/freepik__yakira-woman-in-a-pastel-midi-skirt-with-soft-plea__15875_uogsmb.webp",
+    "project_category_main": "AI-Driven Character Design",
+    "project_category_sub": ["Virtual Influencer", "Digital Model", "Sri Lankan AI"],
     "project_links": [],
-    "project_desc": "Blush Bites is a vibrant short eats restaurant brought to life with AI-driven design. From its playful pink-themed branding to custom AI-generated logos, decals, and visuals, every element reflects a modern, inviting aesthetic. This project blends creativity and technology to craft a unique dining experience.",
+    "project_desc": "Yakira is an AI-generated virtual influencer representing the essence of Sri Lankan elegance. Created with tuned AI models, Yakira showcases local-inspired fashion styles and soft aesthetics, bridging tech and tradition in a stunning digital persona.",
     "project_keyfeatures": [
-      "AI-Driven Branding",
-      "Modern & Minimalistic",
-      "Streamlined Visual Appeal"
+      "AI-Tuned South Asian Model",
+      "Culturally-Inspired Outfit Designs",
+      "Ready for Brand Collaborations"
     ],
     "project_showcase": {
       "video_link": [],
       "image_links": [
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739973069/2_icmhxy.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972838/5_daajjt.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972836/4_uhgcyy.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/1_ykjcv9.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/7_ggj25y.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/3_gi4vvu.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972835/8_jbwx7c.jpg",
-        "https://res.cloudinary.com/das8wrfd1/image/upload/v1739972834/6_dtqnue.jpg"
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500330/freepik__yakira-wearing-olive-green-relaxed-shorts-with-sid__15941_r2megn.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500330/freepik__yakira-woman-in-a-pastel-midi-skirt-with-soft-plea__15873_qzl2wq.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500330/freepik__yakira-wearing-a-sea-green-boxy-shortsleeve-shirt-__15884_tvhc56.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500330/freepik__yakira-wearing-a-vintageinspired-dress-the-dress-s__15979_l8psgj.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500329/freepik__yakira-wearing-a-green-boxy-shortsleeve-shirt-with__15944_glls3k.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500329/freepik__yakira-wearing-a-light-grey-shirt-dress-sitting-on__15841_yrej06.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500326/freepik__yakira-in-a-white-offshoulder-top-standing-on-a-wo__15888_x4cjy6.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500325/freepik__yakira-in-a-soft-cream-top-with-pleated-neckline-s__15778_rkrn0w.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500321/freepik__yakira-in-a-fitted-white-fullsleeve-top-posing-con__15847_kxlbwt.webp"
       ]
     },
     "__v": 0,
-    "order": 3
+    "order": 5
   }
+  ,
+  {
+    "_id": "67b5e1ba791428aa82505474",
+    "project_title": "Frulora",
+    "project_sub_title": "Nature’s Goodness, Dehydrated to Perfection!",
+    "project_cover_img_link": "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500346/cover_art_sszyyr.jpg",
+    "project_category_main": "AI-Driven Branding & Product Design",
+    "project_category_sub": ["Food Branding", "AI-Powered Design", "Natural Products"],
+    "project_links": [],
+    "project_desc": "Frulora is a premium dehydrated food brand we built from the ground up using AI to speed up our branding and design workflow. From product packaging to visual storytelling, we focused on clean, earthy aesthetics that reflect the purity of nature. The result? A modern, health-focused brand that feels both fresh and functional.",
+    "project_keyfeatures": [
+      "AI-Enhanced Brand Identity",
+      "Clean & Natural Packaging Design",
+      "Optimized Visual Workflow"
+    ],
+    "project_showcase": {
+      "video_link": [],
+      "image_links": [
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500364/papaya_leaves-powder_slqi4p.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500359/soursop_powder_y5cygz.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500359/pineapple_slices_eeo0ht.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500358/moringa_leaves_powder_yf565h.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500358/pineapple_powder_zv4txl.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500357/papaya_leaves_h4ehgt.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500353/mongo_slices_qfw9oh.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500353/mango_powder_cjvinn.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500353/ginger_slices_yogv43.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500352/ginger_powder_u6gggf.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500351/banana_slices_wqgftf.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500350/blue_lotus_flower_cmudrb.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500350/blue_lotus_powder_gxryrd.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500349/blue_lotus_slices_wqfxxv.png",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748500349/curry_leaves_powder_x94exa.png"
+      ]
+    },
+    "__v": 0,
+    "order": 4
+  },
+  {
+    "_id": "67b5e1ba791428aa82505475",
+    "project_title": "Sakya Route Optimization Software",
+    "project_sub_title": "Smart visit scheduling and check-in tracking made simple.",
+    "project_cover_img_link": "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974605_121_1_jenmny.webp",
+    "project_category_main": "Custom Software & Automation",
+    "project_category_sub": ["Facility Management", "Route Optimization", "Admin Tools"],
+    "project_links": [],
+    "project_desc": "Sakya is a modern software solution designed to streamline scheduling, permissions, and real-time visitor check-ins for businesses managing facility visits. It offers a clean dashboard, mobile-friendly access, and automated record-keeping to boost coordination, transparency, and security.",
+    "project_keyfeatures": [
+      "Employee Portal with Secure Sign-in",
+      "Easy Visit Scheduling via Smart Forms",
+      "Real-time Visitor Tracking Dashboard"
+    ],
+    "project_showcase": {
+      "video_link": [],
+      "image_links": [
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974605_121_1_jenmny.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/1_2_xcgqz8.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974596_121_1_s4bsgl.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_181242_gdi8is.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974612_121_1_soezrb.webp",
+        "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_174950_zlca4o.webp"
+      ]
+    },
+    "__v": 0,
+    "order": 6
+  }
+  
+  
 ]

@@ -275,14 +275,14 @@ export default function TeamMemberPage() {
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       Expertise
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full justify-items-center">
+                    <div className="space-y-4 w-full">
                       {member.member_experties.map((item, index) => (
                         <div
                           key={index}
-                          className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 justify-center"
+                          className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
                         >
-                          <Brain className="h-5 w-5 text-primary" />
-                          <span>{item}</span>
+                          <Brain className="h-6 w-6 text-primary flex-shrink-0" />
+                          <span className="text-lg">{item}</span>
                         </div>
                       ))}
                     </div>

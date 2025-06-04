@@ -206,9 +206,31 @@ export const aiPersonalBrandingGalleryData = [
 ];
 
 // Others stay unchanged
-export const automationGalleryData = [];
+export const automationGalleryData = [
+  {
+    category: "Sakya Route Optimization",
+    show_limit: 6,
+    items: [
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974605_121_1_jenmny.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/1_2_xcgqz8.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974596_121_1_s4bsgl.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_181242_gdi8is.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974612_121_1_soezrb.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_174950_zlca4o.webp"
+    ]
+  },
+  {
+    category: "Automation Dashboards",
+    show_limit: 4,
+    items: [
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964713/Screenshot_2025-06-03_205009_zz0wd4.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964712/Screenshot_2025-06-03_204908_csaacv.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964712/Screenshot_2025-06-03_204927_yhgihb.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964711/Screenshot_2025-06-03_204825_zylksr.webp"
+    ]
+  }
+];
 
-// Web Development Gallery Data - Added from the removed Web Development project
 export const webDevelopmentGalleryData = [
   {
     category: "Website Examples",
@@ -222,5 +244,30 @@ export const webDevelopmentGalleryData = [
   }
 ];
 
-export const softwareSolutionsGalleryData = [];
-export const workflowWizardGalleryData = [];
+export const softwareSolutionsGalleryData = [
+  {
+    category: "Sakya Route Optimization Software",
+    show_limit: 6,
+    items: [
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974605_121_1_jenmny.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/1_2_xcgqz8.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974596_121_1_s4bsgl.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_181242_gdi8is.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/6188202942255974612_121_1_soezrb.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964468/Screenshot_2025-06-01_174950_zlca4o.webp"
+    ]
+  }
+];
+
+export const workflowWizardGalleryData = [
+  {
+    category: "Smart Workflow Screens",
+    show_limit: 4,
+    items: [
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964713/Screenshot_2025-06-03_205009_zz0wd4.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964712/Screenshot_2025-06-03_204908_csaacv.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964712/Screenshot_2025-06-03_204927_yhgihb.webp",
+      "https://res.cloudinary.com/dpc7doi10/image/upload/v1748964711/Screenshot_2025-06-03_204825_zylksr.webp"
+    ]
+  }
+];

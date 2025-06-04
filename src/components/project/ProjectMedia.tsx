@@ -49,17 +49,17 @@ export default function ProjectMedia({ videos, gallery, webLinks }: ProjectMedia
           ))}
         </div>
 
-        {/* Display Web Links */}
+        {/* Display Web Links - One per row */}
         {webLinks && webLinks.length > 0 && (
           <div className="mt-12">
-            <div className="space-y-6">
+            <div className="flex flex-col space-y-6">
               {webLinks.map((link, index) => (
                 <div
                   key={index}
                   className="relative w-full cursor-pointer transform transition-all duration-300 hover:scale-105"
-                  onClick={() => handleLinkClick(link)} // Opens the link in a new tab when clicked
+                  onClick={() => handleLinkClick(link)}
                 >
-                  <div className="relative pb-[40%]">
+                  <div className="relative pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
                     <iframe
                       src={link}
                       className="absolute inset-0 w-full h-full border-none"
@@ -67,8 +67,6 @@ export default function ProjectMedia({ videos, gallery, webLinks }: ProjectMedia
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
-                  </div>
-                  <div className="absolute inset-0 bg-black bg-opacity-0 flex justify-center items-center">
                   </div>
                 </div>
               ))}

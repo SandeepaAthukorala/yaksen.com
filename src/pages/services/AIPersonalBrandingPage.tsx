@@ -153,7 +153,7 @@ export default function AIPersonalBrandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section - Temporarily Hidden
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
@@ -239,6 +239,7 @@ export default function AIPersonalBrandingPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="py-16 bg-primary">

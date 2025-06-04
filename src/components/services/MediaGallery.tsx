@@ -9,6 +9,7 @@ type MediaItem = string;
 type GalleryCategory = {
   category: string;
   items: MediaItem[];
+  show_limit?: number;
 };
 
 type MediaGalleryProps = {
@@ -197,13 +198,13 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ mediaData }) => {
         );
       case 'youtube':
         return (
-          <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+          <div key={index} className="overflow-hidden rounded-lg shadow-lg col-span-1 sm:col-span-2 lg:col-span-3">
             {renderYouTubeEmbed(item)}
           </div>
         );
       case 'website':
         return (
-          <div key={index}>
+          <div key={index} className="col-span-1 sm:col-span-2 lg:col-span-3">
             {renderWebsiteEmbed(item)}
           </div>
         );
@@ -238,9 +239,10 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ mediaData }) => {
                 {expandedCategories[category.category] && (
                   <div className="p-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {/* Randomize items order within the category */}
+                      {/* Randomize items order within the category and limit to show_limit */}
                       {[...category.items]
                         .sort(() => Math.random() - 0.5)
+                        .slice(0, category.show_limit || 6)
                         .map((item, itemIndex) => 
                           <React.Fragment key={`${category.category}-${itemIndex}-${item.substring(0, 20)}`}>
                             {renderMediaItem(item, itemIndex)}
@@ -254,9 +256,10 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ mediaData }) => {
           ) : (
             // Single category, no title needed
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Randomize items order */}
+              {/* Randomize items order and limit to show_limit */}
               {[...filteredMediaData[0].items]
                 .sort(() => Math.random() - 0.5)
+                .slice(0, filteredMediaData[0].show_limit || 6)
                 .map((item, itemIndex) => 
                   <React.Fragment key={`single-${itemIndex}-${item.substring(0, 20)}`}>
                     {renderMediaItem(item, itemIndex)}

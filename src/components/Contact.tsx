@@ -57,7 +57,7 @@ import { useState } from "react";
         {
           icon: Phone,
           title: "Phone",
-          value: "+94 78 120 3097",
+          value: "+94 77 699 3097",
           description: "Mon-Fri from 8am to 5pm",
           gradient: "from-green-500 to-emerald-500"
         },

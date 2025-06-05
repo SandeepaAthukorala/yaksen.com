@@ -43,7 +43,7 @@ interface MemberData {
   member_image_link: string;
   member_name: string;
   member_position: string;
-  member_mail: string;
+  member_mail?: string;
   member_socialmedia: SocialMedia[];
   member_freelance_sites: FreeLance[];
   member_about: string;
@@ -197,17 +197,20 @@ export default function TeamMemberPage() {
                     </div>
 
                     <div className="space-y-4 text-center">
-                      <motion.a
-                        href={`mailto:${member.member_mail}`}
-                        className="flex justify-center items-center gap-3 p-3 bg-primary-500/10 hover:bg-primary-500/20 rounded-xl text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <div className="p-2 bg-primary-500/20 rounded-lg group-hover:bg-primary-500/30 transition-colors">
-                          <Mail className="h-4 w-4" />
-                        </div>
-                        <span className="font-medium">{member.member_mail}</span>
-                      </motion.a>
+                    {member.member_mail?.trim() !== "" && (
+  <motion.a
+    href={`mailto:${member.member_mail}`}
+    className="flex justify-center items-center gap-3 p-3 bg-primary-500/10 hover:bg-primary-500/20 rounded-xl text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    <div className="p-2 bg-primary-500/20 rounded-lg group-hover:bg-primary-500/30 transition-colors">
+      <Mail className="h-4 w-4" />
+    </div>
+    <span className="font-medium">{member.member_mail}</span>
+  </motion.a>
+)}
+
 
                       <div className="flex flex-wrap gap-3 justify-center">
                         {member.member_socialmedia.map((item, index) => (

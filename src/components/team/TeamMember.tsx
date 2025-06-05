@@ -9,7 +9,7 @@ interface TeamMemberProps {
   role: string;
   image: string;
   bio: string;
-  email: string;
+  email?: string;
 }
 
 export default function TeamMember({
@@ -74,17 +74,19 @@ export default function TeamMember({
             </p>
           </div>
           
-          <motion.button
-            onClick={handleEmailClick}
-            className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group/email"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="p-1.5 rounded-lg bg-primary-500/10 group-hover/email:bg-primary-500/20 transition-colors duration-200">
-              <Mail className="h-3.5 w-3.5" />
-            </div>
-            <span className="group-hover/email:underline">{email}</span>
-          </motion.button>
+          {email?.trim() !== "" && (
+  <motion.button
+    onClick={handleEmailClick}
+    className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group/email"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <div className="p-1.5 rounded-lg bg-primary-500/10 group-hover/email:bg-primary-500/20 transition-colors duration-200">
+      <Mail className="h-3.5 w-3.5" />
+    </div>
+    <span className="group-hover/email:underline">{email}</span>
+  </motion.button>
+)}
         </div>
         
         {/* Decorative Elements */}

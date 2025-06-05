@@ -1,3 +1,5 @@
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FaSquareFacebook,
   FaGithub,
@@ -16,7 +18,7 @@ import { SiFreelancer } from "react-icons/si";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Brain, Mail } from "lucide-react";
+import { Brain, Mail, Download, Star, Award, Code, Briefcase } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import NotFound from "../NotFound";
@@ -62,7 +64,6 @@ interface projectData {
   project_showcase: { video_link: string[]; image_links: string[]; web_links?: string[] }; // Added web_links optional
 }
 
-
 export default function TeamMemberPage() {
   const [member, setMember] = useState<MemberData | undefined>(undefined); // Initialize as undefined
   const [featuredProjects, setFeaturedProjects] = useState<projectData[]>([]);
@@ -79,56 +80,51 @@ export default function TeamMemberPage() {
       setLoading(false); // Stop loading if no ID
       return;
     }
+
     console.log("TeamMemberPage: Attempting to find member with ID:", memberId);
-    const foundMember = (teamData as MemberData[]).find(m => m._id === memberId);
+    const foundMember = (teamData as MemberData[]).find((m) => m._id === memberId);
     if (foundMember) {
-      setMember(foundMember);
       console.log("TeamMemberPage: Member found:", foundMember.member_name);
     } else {
       console.warn("TeamMemberPage: Member not found for ID:", memberId);
-      setMember(undefined);
     }
-    // setLoading(false); // Let getFeaturedProjectData handle final loading state
+    setMember(foundMember);
   };
 
-  // Fetch Featured Projects Data Locally
-  const getFeaturedProjectData = (memberData: MemberData | undefined) => {
-    if (memberData && memberData.member_featured_projects && memberData.member_featured_projects.length > 0) {
-      const projectIds = memberData.member_featured_projects;
-      console.log("TeamMemberPage: Fetching featured projects for IDs:", projectIds);
-      // Filter projectsData based on the project IDs associated with the member
-      const foundProjects = (projectsData as projectData[]).filter(p => projectIds.includes(p._id));
-      setFeaturedProjects(foundProjects);
-      console.log("TeamMemberPage: Found featured projects:", foundProjects.length);
-    } else {
+  // Fetch Featured Projects Locally
+  const getFeaturedProjectsLocal = (projectIds: string[]) => {
+    if (!projectIds || projectIds.length === 0) {
       setFeaturedProjects([]);
-      console.log("TeamMemberPage: No featured projects for member:", memberData?.member_name);
+      return;
     }
-    setLoading(false); // Set loading false after projects are processed
+
+    console.log("TeamMemberPage: Fetching featured projects for IDs:", projectIds);
+    const foundProjects = (projectsData as projectData[]).filter((p) =>
+      projectIds.includes(p._id)
+    );
+    console.log("TeamMemberPage: Found featured projects:", foundProjects.length);
+    setFeaturedProjects(foundProjects);
   };
-
-
-  useEffect(() => {
-    setLoading(true); // Start loading
-    getMember(id); // Fetch member first
-  }, [id]); // Depend only on id
-
-  useEffect(() => {
-    // This effect runs after the member state is updated
-    if (member !== undefined) { // Check if member state is set (even if null/not found)
-        getFeaturedProjectData(member); // Fetch projects based on the found member
-    } else if (!loading && !member) {
-        // If loading is finished and member is still undefined (not found), ensure loading is false
-        setLoading(false);
-    }
-  }, [member]); // Depend on member state
-
-
-  useScrollToTop();
 
   const handleProjectClick = (projectId: string) => {
     navigate(`/projects/${projectId}`);
   };
+
+  useEffect(() => {
+    getMember(id);
+  }, [id]);
+
+  useEffect(() => {
+    if (member && member.member_featured_projects) {
+      getFeaturedProjectsLocal(member.member_featured_projects);
+    } else {
+      console.log("TeamMemberPage: No featured projects for member:", member?.member_name);
+      setFeaturedProjects([]);
+    }
+    setLoading(false); // Set loading to false after processing
+  }, [member]);
+
+  useScrollToTop();
 
   if (loading) {
     console.log("TeamMemberPage: Rendering Loading component");
@@ -143,191 +139,354 @@ export default function TeamMemberPage() {
   console.log("TeamMemberPage: Rendering member page for:", member.member_name);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800">
       <Navbar />
 
-      <div className="pt-24 pb-16">
+      {/* Background Pattern */}
+      <div className="fixed inset-0 opacity-30 dark:opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.15)_1px,transparent_0)] [background-size:20px_20px]" />
+      </div>
+
+      <div className="relative pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-3 lg:gap-12">
             {/* Profile Section */}
-            <div className="lg:col-span-1 flex flex-col items-center justify-center">
+            <motion.div 
+              className="lg:col-span-1 flex flex-col items-center justify-center"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
               <div className="sticky top-24">
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                  <div className="aspect-square rounded-xl overflow-hidden mb-6">
-                    <img
-                      src={member.member_image_link}
-                      alt={member.member_name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">
-                    {member.member_name}
-                  </h1>
-                  <p className="text-primary font-medium mb-4 text-center">
-                    {member.member_position}
-                  </p>
-
-                  <div className="space-y-4 text-center">
-                    <a
-                      href={`mailto:${member.member_mail}`}
-                      className="flex justify-center items-center text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                <motion.div 
+                  className="relative bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-neutral-200/50 dark:border-neutral-700/50 overflow-hidden"
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-secondary-500/5" />
+                  
+                  <div className="relative z-10">
+                    <motion.div 
+                      className="aspect-square rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/20 dark:to-secondary-900/20"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <Mail className="h-5 w-5 mr-2" />
-                      {member.member_mail}
-                    </a>
-
-                    <div className="flex space-x-4 justify-center">
-                      {member.member_socialmedia.map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-1 bg-gray-100 dark:bg-gray-700 rounded-lg hover:text-primary"
-                        >
-                          {item.platform &&
-                            item.platform.toLowerCase() === "github" && (
-                              <FaGithub className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "linkedin" && (
-                              <FaLinkedin className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "facebook" && (
-                              <FaSquareFacebook className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "x" && (
-                              <FaX className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "youtube" && (
-                              <FaYoutube className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "instagram" && (
-                              <FaInstagram className="h-6 w-6 text-black dark:text-white" />
-                            )}
-                        </a>
-                      ))}
+                      <img
+                        src={member.member_image_link}
+                        alt={member.member_name}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                    
+                    <motion.h1 
+                      className="text-3xl font-display font-bold text-neutral-900 dark:text-white mb-2 text-center"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {member.member_name}
+                    </motion.h1>
+                    
+                    <div className="inline-block w-full text-center mb-6">
+                      <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-full">
+                        <p className="text-lg font-medium bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                          {member.member_position}
+                        </p>
+                      </div>
                     </div>
 
-                    {/* Freelance Sites Section */}
-                    {member.member_freelance_sites && member.member_freelance_sites.length > 0 && (
-                    <div className="flex space-x-4 justify-center mt-4">
-                      {member.member_freelance_sites.map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-1 bg-gray-100 dark:bg-gray-700 rounded-lg hover:text-primary"
-                        >
-                          {item.platform &&
-                            item.platform.toLowerCase() === "fiverr" && (
-                              <TbBrandFiverr className="h-6 w-6 text-green-500" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "upwork" && (
-                              <TbBrandUpwork className="h-6 w-6 text-green-500" />
-                            )}
-                          {item.platform &&
-                            item.platform.toLowerCase() === "freelancer" && (
-                              <SiFreelancer className="h-6 w-6 text-green-500" />
-                            )}
+                    <div className="space-y-4 text-center">
+                      <motion.a
+                        href={`mailto:${member.member_mail}`}
+                        className="flex justify-center items-center gap-3 p-3 bg-primary-500/10 hover:bg-primary-500/20 rounded-xl text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="p-2 bg-primary-500/20 rounded-lg group-hover:bg-primary-500/30 transition-colors">
+                          <Mail className="h-4 w-4" />
+                        </div>
+                        <span className="font-medium">{member.member_mail}</span>
+                      </motion.a>
 
-                        </a>
-                      ))}
-                    </div>)}
-
-
-                    {member.member_resume_link && (
-                      <div className="mt-6">
-                        <a
-                          href={member.member_resume_link}
-                          download
-                          className="inline-block bg-primary text-white py-2 px-6 rounded-lg text-lg hover:bg-primary-dark"
-                        >
-                          Download Resume
-                        </a>
+                      <div className="flex flex-wrap gap-3 justify-center">
+                        {member.member_socialmedia.map((item, index) => (
+                          <motion.a
+                            key={index}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 bg-neutral-100 dark:bg-neutral-700 rounded-xl hover:bg-primary-500/20 dark:hover:bg-primary-500/20 transition-all duration-200 group"
+                            whileHover={{ scale: 1.1, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            {item.platform &&
+                              item.platform.toLowerCase() === "github" && (
+                                <FaGithub className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                            {item.platform &&
+                              item.platform.toLowerCase() === "linkedin" && (
+                                <FaLinkedin className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                            {item.platform &&
+                              item.platform.toLowerCase() === "facebook" && (
+                                <FaSquareFacebook className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                            {item.platform &&
+                              item.platform.toLowerCase() === "x" && (
+                                <FaX className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                            {item.platform &&
+                              item.platform.toLowerCase() === "youtube" && (
+                                <FaYoutube className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                            {item.platform &&
+                              item.platform.toLowerCase() === "instagram" && (
+                                <FaInstagram className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
+                              )}
+                          </motion.a>
+                        ))}
                       </div>
-                    )}
+
+                      {/* Freelance Platforms */}
+                      {member.member_freelance_sites &&
+                        member.member_freelance_sites.length > 0 && (
+                          <motion.div 
+                            className="mt-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                          >
+                            <div className="flex items-center justify-center gap-2 mb-4">
+                              <Briefcase className="h-4 w-4 text-primary-600" />
+                              <h3 className="text-lg font-display font-semibold text-neutral-900 dark:text-white">
+                                Freelance Platforms
+                              </h3>
+                            </div>
+                            <div className="flex flex-wrap gap-3 justify-center">
+                              {member.member_freelance_sites.map((item, index) => (
+                                <motion.a
+                                  key={index}
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-3 bg-secondary-500/10 hover:bg-secondary-500/20 rounded-xl transition-all duration-200 group"
+                                  whileHover={{ scale: 1.1, y: -2 }}
+                                  whileTap={{ scale: 0.95 }}
+                                >
+                                  {item.platform &&
+                                    item.platform.toLowerCase() === "fiverr" && (
+                                      <TbBrandFiverr className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-secondary-600 dark:group-hover:text-secondary-400" />
+                                    )}
+                                  {item.platform &&
+                                    item.platform.toLowerCase() === "upwork" && (
+                                      <TbBrandUpwork className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-secondary-600 dark:group-hover:text-secondary-400" />
+                                    )}
+                                  {item.platform &&
+                                    item.platform.toLowerCase() === "freelancer" && (
+                                      <SiFreelancer className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-secondary-600 dark:group-hover:text-secondary-400" />
+                                    )}
+                                </motion.a>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+
+                      {/* Resume Download */}
+                      {member.member_resume_link && (
+                        <motion.div 
+                          className="mt-6"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.5 }}
+                        >
+                          <motion.a
+                            href={member.member_resume_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-xl hover:from-primary-700 hover:to-secondary-700 transition-all duration-200 shadow-lg hover:shadow-xl group"
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <Download className="h-5 w-5 group-hover:animate-bounce" />
+                            <span className="font-medium">Download Resume</span>
+                          </motion.a>
+                        </motion.div>
+                      )}
+                    </div>
+                    
+                    {/* Decorative Elements */}
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-primary-400 rounded-full opacity-20" />
+                    <div className="absolute bottom-4 left-4 w-2 h-2 bg-secondary-400 rounded-full opacity-20" />
                   </div>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Content Section */}
-            <div className="lg:col-span-2 mt-12 lg:mt-0">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    About
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {member.member_about}
-                  </p>
-                </div>
-
-                {member.member_experties && member.member_experties.length > 0 && (
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg mb-8">
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                      Expertise
-                    </h2>
-                    <div className="space-y-4 w-full">
-                      {member.member_experties.map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
-                        >
-                          <Brain className="h-6 w-6 text-primary flex-shrink-0" />
-                          <span className="text-lg">{item}</span>
-                        </div>
-                      ))}
+            <motion.div 
+              className="lg:col-span-2 mt-8 lg:mt-0"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="space-y-8">
+                {/* About Section */}
+                <motion.div 
+                  className="relative bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-neutral-200/50 dark:border-neutral-700/50 overflow-hidden"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-secondary-500/5" />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-2 bg-primary-500/20 rounded-xl">
+                        <Star className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                      </div>
+                      <h2 className="text-3xl font-display font-bold text-neutral-900 dark:text-white">
+                        About
+                      </h2>
                     </div>
+                    <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                      {member.member_about}
+                    </p>
                   </div>
+                  
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full opacity-30" />
+                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary-400 rounded-full opacity-30" />
+                </motion.div>
+
+                {/* Expertise Section */}
+                {member.member_experties && member.member_experties.length > 0 && (
+                  <motion.div 
+                    className="relative bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-neutral-200/50 dark:border-neutral-700/50 overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    {/* Background Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary-500/5 via-transparent to-primary-500/5" />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 bg-secondary-500/20 rounded-xl">
+                          <Code className="h-6 w-6 text-secondary-600 dark:text-secondary-400" />
+                        </div>
+                        <h2 className="text-3xl font-display font-bold text-neutral-900 dark:text-white">
+                          Expertise
+                        </h2>
+                      </div>
+                      <div className="space-y-4">
+                        {member.member_experties.map((skill, index) => (
+                          <motion.div
+                            key={index}
+                            className="flex items-center gap-4 p-4 bg-neutral-50/80 dark:bg-neutral-700/80 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-600/50 hover:bg-neutral-100/80 dark:hover:bg-neutral-600/80 transition-all duration-200 group"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5 + index * 0.1 }}
+                            whileHover={{ x: 5 }}
+                          >
+                            <div className="p-2 bg-primary-500/20 rounded-lg group-hover:bg-primary-500/30 transition-colors">
+                              <Brain className="h-5 w-5 text-primary-600 dark:text-primary-400" />
+                            </div>
+                            <span className="text-lg font-medium text-neutral-700 dark:text-neutral-300">
+                              {skill}
+                            </span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Decorative Elements */}
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-secondary-400 rounded-full opacity-30" />
+                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-primary-400 rounded-full opacity-30" />
+                  </motion.div>
                 )}
 
+                {/* Featured Projects Section */}
                 {featuredProjects && featuredProjects.length > 0 && (
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                      Featured Projects
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
-                      {featuredProjects.map((project, index) => (
-                        <div
-                          key={index}
-                          onClick={() => handleProjectClick(project._id)}
-                          style={{
-                            backgroundImage: `url(${project.project_cover_img_link})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                          }}
-                          className="relative bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 min-h-[150px] flex flex-col justify-end"
-                        >
-                          {/* Overlay */}
-                          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-
-                          {/* Content */}
-                          <div className="relative z-10">
-                            <h3 className="text-lg font-semibold text-white mb-1"> {/* Adjusted margin */}
-                              {project.project_title}
-                            </h3>
-                            <p className="text-gray-200 text-sm"> {/* Adjusted text color */}
-                              {project.project_sub_title}
-                            </p>
-                          </div>
+                  <motion.div 
+                    className="relative bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-neutral-200/50 dark:border-neutral-700/50 overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    {/* Background Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-secondary-500/5" />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-8">
+                        <div className="p-2 bg-primary-500/20 rounded-xl">
+                          <Award className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                         </div>
-                      ))}
+                        <h2 className="text-3xl font-display font-bold text-neutral-900 dark:text-white">
+                          Featured Projects
+                        </h2>
+                      </div>
+                      <div className="grid gap-6 md:grid-cols-2">
+                        {featuredProjects.map((project, index) => (
+                          <motion.div
+                            key={project._id}
+                            className="group relative bg-neutral-50/80 dark:bg-neutral-700/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-neutral-200/50 dark:border-neutral-600/50"
+                            onClick={() => handleProjectClick(project._id)}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.6 + index * 0.1 }}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                          >
+                            {/* Project Image */}
+                            <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/20 dark:to-secondary-900/20">
+                              <motion.img
+                                src={project.project_cover_img_link}
+                                alt={project.project_title}
+                                className="w-full h-full object-cover"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.3 }}
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                              
+                              {/* Category Badge */}
+                              <div className="absolute top-4 left-4">
+                                <div className="px-3 py-1 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm rounded-full">
+                                  <span className="text-xs font-medium bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                                    {project.project_category_main}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            {/* Project Content */}
+                            <div className="p-6">
+                              <h3 className="text-xl font-display font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                {project.project_title}
+                              </h3>
+                              <p className="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-2">
+                                {project.project_sub_title}
+                              </p>
+                            </div>
+                            
+                            {/* Decorative Elements */}
+                            <div className="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full opacity-20 group-hover:opacity-60 transition-opacity" />
+                          </motion.div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                    
+                    {/* Decorative Elements */}
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full opacity-30" />
+                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary-400 rounded-full opacity-30" />
+                  </motion.div>
                 )}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

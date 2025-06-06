@@ -57,17 +57,18 @@ export default function ProjectContent({ content, features, projectLinks }: Proj
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-6">Project Links</h2>
                   <div className="flex space-x-4">
                     {projectLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`text-primary text-2xl hover:text-opacity-80 p-2 rounded-lg ${
-                          link.platform.toLowerCase() === "web" ? "bg-gray-200 dark:bg-gray-700" : ""
-                        }`}
-                      >
-                        {iconMapping[link.platform.toLowerCase()] || <FaGlobe />}
-                      </a>
+<a
+  key={index}
+  href={link.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`text-orange-500 text-2xl hover:text-orange-400 p-2 rounded-lg ${
+    link.platform.toLowerCase() === "web" ? "bg-gray-200 dark:bg-gray-700" : ""
+  }`}
+>
+  {iconMapping[link.platform.toLowerCase()] || <FaGlobe />}
+</a>
+
                     ))}
                   </div>
                 </>

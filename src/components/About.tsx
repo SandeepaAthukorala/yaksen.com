@@ -210,11 +210,11 @@ export default function About() {
             <div className="text-neutral-600 dark:text-neutral-400">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-2">100+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-2">30+</div>
             <div className="text-neutral-600 dark:text-neutral-400">Happy Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-accent-500 mb-2">50+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-accent-500 mb-2">200+</div>
             <div className="text-neutral-600 dark:text-neutral-400">Projects Delivered</div>
           </div>
           <div className="text-center">

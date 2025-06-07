@@ -41,6 +41,8 @@ const Navbar = () => {
   const handleNavClick = (href: string) => {
     const sectionId = href.substring(1);
     setActiveSection(sectionId);
+    
+    // Close the mobile menu first
     setIsOpen(false);
     
     // If we're not on the home page, navigate to home first
@@ -52,12 +54,15 @@ const Navbar = () => {
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100);
+      }, 300); // Increased timeout to ensure navigation completes
     } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      // Small delay to ensure mobile menu closes first
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     }
   };
   

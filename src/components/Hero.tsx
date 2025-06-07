@@ -109,12 +109,12 @@ export default function Hero() {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
                 <motion.a
-                  href="#services"
+                  href="#contact"
                   className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl text-white border-2 border-white/20 hover:border-white/40 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Our Services
+                  Contact Us
                   <Sparkles className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                 </motion.a>
               </motion.div>
@@ -147,7 +147,7 @@ export default function Hero() {
       
       {/* Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 hidden sm:block"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >

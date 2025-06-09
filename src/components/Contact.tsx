@@ -116,7 +116,7 @@ import { useState } from "react";
               </h2>
               <p className="text-xl lg:text-2xl text-neutral-600 dark:text-neutral-400 max-w-4xl mx-auto leading-relaxed">
                 Ready to start your project? Let's discuss how we can help you 
-                <span className="text-primary-500 font-semibold"> achieve your goals</span> and 
+                <span className="text-primary-500 font-semibold"> achieve your goals</span> and {" "}
                 <span className="text-secondary-500 font-semibold">transform your business</span>.
               </p>
             </motion.div>

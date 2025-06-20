@@ -10,6 +10,7 @@ import AutomationPage from "./pages/services/AutomationPage";
 import AIPersonalBrandingPage from "./pages/services/AIPersonalBrandingPage";
 import SmartVisualDesignPage from "./pages/services/SmartVisualDesignPage";
 import WorkflowWizardPage from "./pages/services/WorkflowWizardPage";
+import GarmentApparelPage from "./pages/industries/GarmentApparelPage";
 import TeamMemberPage from "./pages/team/TeamMemberPage";
 import PrivacyPolicy from "./pages/policies/PrivacyPolicy";
 import TermsConditions from "./pages/policies/TermsConditions";
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/services/smart-visual-design" element={<SmartVisualDesignPage />} />
           <Route path="/services/workflow-wizard" element={<WorkflowWizardPage />} />
           <Route path="/services/:id" element={<ServicePage />} />
+          <Route path="/industries/garment-apparel" element={<GarmentApparelPage />} />
           <Route path="/team/:id" element={<TeamMemberPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsConditions />} />

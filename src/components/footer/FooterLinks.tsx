@@ -13,6 +13,7 @@ const links: {
     items: [
       { label: "About Us", path: "/", section: "about" },
       { label: "Services", path: "/", section: "services" },
+      { label: "Industries", path: "/", section: "industries" },
       { label: "Projects", path: "/", section: "projects" },
       { label: "Contact", path: "/", section: "contact" },
     ],

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAKSEN - ඔබේ ව්‍යාපාරයට</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(180deg, #1f0101 0%, #3a0000 100%);
+        }
+
+        .card {
+            background-color: #1a0000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .whatsapp-button {
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .nav-link {
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #ef4444;
+            transform: translateY(-2px);
+        }
+
+        .animate-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-text {
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 w-full bg-gray-900 bg-opacity-70 backdrop-blur-lg shadow-xl py-4 px-6 md:px-12 flex justify-center space-x-6 sm:space-x-10">
+        <a href="#policies" class="nav-link text-gray-300 font-bold text-md sm:text-lg">පොරොන්දුව</a>
+        <a href="#packages" class="nav-link text-gray-300 font-bold text-md sm:text-lg">පැකේජ</a>
+        <a href="#gallery" class="nav-link text-gray-300 font-bold text-md sm:text-lg">නිර්මාණ</a>
+        <a href="#contact" class="nav-link text-gray-300 font-bold text-md sm:text-lg">සම්බන්ධ වන්න</a>
+    </nav>
+
+    <header class="w-full text-center py-16 px-4">
+        <div class="mb-8">
+            <!-- YAKSEN Brand Logo -->
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901441/base_logo_col4uk.png" alt="YAKSEN Logo" class="mx-auto rounded-full shadow-2xl h-40 w-40 object-cover transform transition-transform duration-500 hover:scale-110">
+        </div>
+        <h1 class="text-5xl sm:text-6xl font-bold text-red-500 mb-4 hero-text">YAKSEN</h1>
+        <p class="text-xl sm:text-2xl font-light text-gray-300 animate-up">ඔබේ ව්‍යාපාරයට අවශ්‍ය සියලුම Graphics නිර්මාණ සේවාවන් එකම තැනකින්!</p>
+    </header>
+    
+    <!-- Policies Section -->
+    <section id="policies" class="max-w-4xl mx-auto px-4 py-8 text-center animate-up">
+        <h2 class="text-3xl sm:text-4xl font-bold text-red-500 mb-8">අපගේ පොරොන්දුව</h2>
+        <ul class="space-y-6 text-left md:text-center">
+            <li class="bg-gray-800 bg-opacity-50 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <p class="text-lg font-normal text-gray-200">
+                    <span class="text-green-400 font-bold text-xl">✅</span> අවසන් කරන Logo Design එකේ 3D mockup version එකක් එක්ක PDF, JPG, PNG Files අපි ඔබට දෙනවා.
+                </p>
+            </li>
+            <li class="bg-gray-800 bg-opacity-50 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <p class="text-lg font-normal text-gray-200">
+                    <span class="text-green-400 font-bold text-xl">✅</span> ඔබ 100%ක්ම Satisfied වෙනකම්ම අවශ්‍ය සියලුම Edit කරලා දෙනවා.
+                </p>
+            </li>
+            <li class="bg-gray-800 bg-opacity-50 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <p class="text-lg font-normal text-gray-200">
+                    <span class="text-green-400 font-bold text-xl">✅</span> ඔබගේ වැඩේ ආරම්භ කිරීමට පෙර අපි 50%ක අත්තිකාරම් මුදලක් ලබා ගන්නවා.
+                </p>
+            </li>
+            <li class="bg-gray-800 bg-opacity-50 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <p class="text-lg font-normal text-gray-200">
+                    <span class="text-green-400 font-bold text-xl">✅</span> අපගේ සියලුම පැකේජ පැය 24ක් වැනි කෙටි කාලයක් තුළදී ඔබට ලබා දිය හැකියි.
+                </p>
+            </li>
+            <li class="bg-gray-800 bg-opacity-50 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <p class="text-lg font-normal text-gray-200">
+                    <span class="text-green-400 font-bold text-xl">✅</span> සම්පූර්ණ මුදල ගෙවූ පසු පමණක් ව්‍යාපෘතියෙහි අවසන් ලිපිගොනු ලබාදෙන අතර කිසිදු හේතුවක් මත ගෙවීම් සම්පූර්ණ කිරීමට පෙර කිසිදු අවසන් ලිපිගොණුවක් ලබා නොදේ.
+                </p>
+            </li>
+            <p class="text-xl font-bold text-gray-300 mt-10">
+                මම නම් හිතන්නේ නැහැ, ඔබට තවත් හිත හිත ඉන්න දෙයක් තියෙනවා කියලා! 🧡
+            </p>
+            <p class="text-2xl font-bold text-red-400">
+                ඉතාමත් සීමිත කාලයක් විතරයි අපි මේ Offer එක ඔබට දෙන්නේ. ඉක්මනට ඔබගේ වැඩේ අපිට බාර දෙන්න.
+            </p>
+        </ul>
+    </section>
+
+    <main id="packages" class="container mx-auto p-4 sm:p-8 space-y-16">
+        <!-- Logo Blaster Package -->
+        <section class="card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16 animate-up">
+            <div class="md:w-1/2">
+                <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901429/1_msqyys.png" alt="Logo Blaster Package" class="rounded-xl w-full h-auto object-cover aspect-square shadow-xl">
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                <h2 class="text-4xl sm:text-5xl font-bold text-red-500">LOGO BLASTER</h2>
+                <p class="text-3xl font-bold text-white"><span class="text-gray-500 line-through mr-2">රු. 4500</span> රු. 3000</p>
+                <p class="text-lg font-normal text-gray-200">ඔබේ ව්‍යාපාරයට ගැළපෙනම ලෝගෝවක්!</p>
+                <ul class="list-disc list-inside text-gray-400 text-md pl-4 space-y-2">
+                    <li>ඔබේ ව්‍යාපාරයට ගැළපෙනම logo එකක් හදාගන්න.</li>
+                    <li>අපි concepts 3ක් ඉදිරිපත් කරනවා.</li>
+                    <li>ඒවාට කැමති වෙනස්කම් (revisions) 6ක් දක්වා කරන්න පුළුවන්.</li>
+                    <li>අවසානයේදී ඔබට අවශ්‍ය final files (JPG, PNG, PDF) ලබා දෙනවා.</li>
+                </ul>
+                <a href="https://wa.me/94776993097?text=Hi%20YAKSEN,%20I%20would%20like%20to%20purchase%20the%20LOGO%20BLASTER%20package." class="whatsapp-button bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901779/pngegg_ugsha3.png" alt="WhatsApp Icon" class="h-5 w-5">
+                    <span>WhatsApp හරහා මිලදී ගන්න</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Social Blaster Package -->
+        <section class="card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row-reverse items-center space-y-8 md:space-y-0 md:space-x-16 animate-up">
+            <div class="md:w-1/2">
+                <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901431/2_xounep.png" alt="Social Blaster Package" class="rounded-xl w-full h-auto object-cover aspect-square shadow-xl">
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                <h2 class="text-4xl sm:text-5xl font-bold text-red-500">SOCIAL BLASTER</h2>
+                <p class="text-3xl font-bold text-white"><span class="text-gray-500 line-through mr-2">රු. 7500</span> රු. 5000</p>
+                <p class="text-lg font-normal text-gray-200">ඔබේ ව්‍යාපාරය Social media හරහා දියුණු කරගන්න!</p>
+                <ul class="list-disc list-inside text-gray-400 text-md pl-4 space-y-2">
+                    <li>ඔබේ social media platforms (Facebook, LinkedIn, TikTok, Instagram) වලට ගැලපෙන banners සහ logos හදාගන්න.</li>
+                    <li>logo concepts 3ක් සහ revisions 6ක් මෙහි ඇතුලත් වෙනවා.</li>
+                </ul>
+                <a href="https://wa.me/94776993097?text=Hi%20YAKSEN,%20I%20would%20like%20to%20purchase%20the%20SOCIAL%20BLASTER%20package." class="whatsapp-button bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901779/pngegg_ugsha3.png" alt="WhatsApp Icon" class="h-5 w-5">
+                    <span>WhatsApp හරහා මිලදී ගන්න</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Business Starter Package -->
+        <section class="card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16 animate-up">
+            <div class="md:w-1/2">
+                <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901439/3_gpnzv1.png" alt="Business Starter Package" class="rounded-xl w-full h-auto object-cover aspect-square shadow-xl">
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                <h2 class="text-4xl sm:text-5xl font-bold text-red-500">BUSINESS STARTER</h2>
+                <p class="text-3xl font-bold text-white"><span class="text-gray-500 line-through mr-2">රු. 6000</span> රු. 4000</p>
+                <p class="text-lg font-normal text-gray-200">ඔබේ ව්‍යාපාරය Professional Level එකට!</p>
+                <ul class="list-disc list-inside text-gray-400 text-md pl-4 space-y-2">
+                    <li>Logo concepts 3ක් සහ revisions 6ක් මෙහි ඇතුලත් වෙනවා.</li>
+                    <li>Professional business card සහ letterhead design එකක්.</li>
+                </ul>
+                <a href="https://wa.me/94776993097?text=Hi%20YAKSEN,%20I%20would%20like%20to%20purchase%20the%20BUSINESS%20STARTER%20package." class="whatsapp-button bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901779/pngegg_ugsha3.png" alt="WhatsApp Icon" class="h-5 w-5">
+                    <span>WhatsApp හරහා මිලදී ගන්න</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Printing King Package -->
+        <section class="card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row-reverse items-center space-y-8 md:space-y-0 md:space-x-16 animate-up">
+            <div class="md:w-1/2">
+                <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901433/4_pinukq.png" alt="Printing King Package" class="rounded-xl w-full h-auto object-cover aspect-square shadow-xl">
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                <h2 class="text-4xl sm:text-5xl font-bold text-red-500">PRINTING KING</h2>
+                <p class="text-3xl font-bold text-white"><span class="text-gray-500 line-through mr-2">රු. 15000</span> රු. 10000</p>
+                <p class="text-lg font-normal text-gray-200">අඩු වියදමකින්, හොඳම මුද්‍රණ!</p>
+                <ul class="list-disc list-inside text-gray-400 text-md pl-4 space-y-2">
+                    <li>Logo concepts 3ක් සහ revisions 6ක් මෙහි ඇතුලත් වෙනවා.</li>
+                    <li>Professional business card සහ letterhead design එකක්.</li>
+                    <li>Business cards 1000ක් සහ Letterheads 1000ක්. මුද්‍රණය කර නිවසටම ගෙන්වාගන්න.</li>
+                </ul>
+                <a href="https://wa.me/94776993097?text=Hi%20YAKSEN,%20I%20would%20like%20to%20purchase%20the%20PRINTING%20KING%20package." class="whatsapp-button bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901779/pngegg_ugsha3.png" alt="WhatsApp Icon" class="h-5 w-5">
+                    <span>WhatsApp හරහා මිලදී ගන්න</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- All in One Package -->
+        <section class="card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16 animate-up">
+            <div class="md:w-1/2">
+                <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901425/5_g5sfcc.png" alt="All in One Package" class="rounded-xl w-full h-auto object-cover aspect-square shadow-xl">
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                <h2 class="text-4xl sm:text-5xl font-bold text-red-500">ALL IN ONE</h2>
+                <p class="text-3xl font-bold text-white"><span class="text-gray-500 line-through mr-2">රු. 10000</span> රු. 7000</p>
+                <p class="text-lg font-normal text-gray-200">සියලුම branding අවශ්‍යතා එකම පැකේජයකින්!</p>
+                <ul class="list-disc list-inside text-gray-400 text-md pl-4 space-y-2">
+                    <li>මේ package එක ඔබේ branding අවශ්‍යතා සියල්ලටම එකම විසඳුමයි.</li>
+                    <li>Logo, Business Card සහ Social kit යන සියලුම දේ එකම package එකකින් ලබාගන්න පුළුවන්.</li>
+                </ul>
+                <a href="https://wa.me/94776993097?text=Hi%20YAKSEN,%20I%20would%20like%20to%20purchase%20the%20ALL%20IN%20ONE%20package." class="whatsapp-button bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757901779/pngegg_ugsha3.png" alt="WhatsApp Icon" class="h-5 w-5">
+                    <span>WhatsApp හරහා මිලදී ගන්න</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Showcase Gallery Section -->
+    <section id="gallery" class="container mx-auto p-4 sm:p-8 space-y-8 animate-up">
+        <h2 class="text-3xl sm:text-4xl font-bold text-red-500 text-center mb-8">අපගේ නිර්මාණ කිහිපයක්</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905865/1_2_chmq7i.jpg" alt="Showcase Image 1" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905862/1_6_kufoiw.jpg" alt="Showcase Image 2" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905858/1_7_r2z508.jpg" alt="Showcase Image 3" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905858/1_4_uadd0g.jpg" alt="Showcase Image 4" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905858/1_8_hxi7gx.jpg" alt="Showcase Image 5" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905803/1_1_ak8m2i.jpg" alt="Showcase Image 6" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905801/1_5_u4j9z2.jpg" alt="Showcase Image 7" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            <img src="https://res.cloudinary.com/dpc7doi10/image/upload/v1757905800/1_3_mrjw6h.jpg" alt="Showcase Image 8" class="w-full aspect-square object-cover rounded-xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+        </div>
+    </section>
+
+    <footer id="contact" class="w-full text-center py-12 px-4 mt-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-red-500 mb-4">සම්බන්ධ වන්න</h2>
+        <ul class="text-md text-gray-400 space-y-2">
+            <li>🌐 <a href="https://yaksen.com" class="hover:text-red-500 transition-colors duration-300">yaksen.com</a></li>
+            <li>📱 WhatsApp: 077 699 3097</li>
+        </ul>
+        <div class="mt-8">
+            <h3 class="text-xl font-bold text-gray-300 mb-2">අමතර සේවාවන්:</h3>
+            <ul class="text-md text-gray-400 space-y-1">
+                <li>Graphics design</li>
+                <li>Printing</li>
+                <li>Web development</li>
+                <li>System development</li>
+                <li>Digital marketing</li>
+            </ul>
+            <p class="text-md font-normal text-gray-300 mt-4">වැඩි විස්තර සඳහා අප අමතන්න.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animations on scroll
+        const animatedElements = document.querySelectorAll('.animate-up');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
